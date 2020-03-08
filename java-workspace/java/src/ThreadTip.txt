@@ -1,0 +1,24 @@
+1) Thread : sleep, join, notify, notifyAll, priority, yield, wait
+			run()메소드를 run()으로 실행. 
+			쓰레드는 경쟁관계임. Synchronized(작업이끝날떄까지 할당받는것)가 필요할 때도 있음.
+			
+			yield() : 양보 - 블럭상태에 빠지는건 아님.
+			sleep() : 	   잠들면서 os에게 권한을 주고 깰 때 요구함.
+			join()  :	  어떤 쓰레드가 끝난 다음 작업함.
+			wait()  :    쓰레드간 협업. / 작업을 일시중지.
+			notify():	 block에 있는 것 중 하나가 풀림.
+			notifyAll() :Block의 모든 것들이 runnable로 들어감.
+			
+			블럭상태 - 어떤 조건을 만족할때까지 runnable이 못되게 함.
+			
+			Synchronized() : lock을 얻고, 끝나면 lock을 양보함.
+			
+			lock을 요청했을때 누군가 사용중이면 기다림.
+
+2) 스레드 객체를 생성하는 두가지 방식
+	1. Thred 클래스를 직접상속
+	2. Runnable 인터페이스를 상속
+ 
+ 3) process - 실행 동작의 단위
+ 	싱글 프로세서 - 한 컴퓨터에서 하나의 프로그램 실행.
+ 	thread - 하나의 process에서 실행동작의 단위

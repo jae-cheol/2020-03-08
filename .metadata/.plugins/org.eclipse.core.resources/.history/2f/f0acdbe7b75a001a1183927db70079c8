@@ -1,0 +1,10 @@
+
+public class charType {
+
+	public static void main(String[] args) {
+		char a='d', b='e';
+		int c1 = a+b;
+		System.out.println(c1);
+	}
+
+}

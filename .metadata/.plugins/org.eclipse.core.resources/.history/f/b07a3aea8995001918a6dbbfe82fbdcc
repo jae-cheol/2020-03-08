@@ -1,0 +1,17 @@
+class A {
+	
+}
+
+class B {
+	public void doStuff() {
+		A b = new A();
+	}
+}
+
+
+public class test {
+	public static void main(String[] args){
+		A 01 = new A();
+		B 02 = new B();
+	}
+}

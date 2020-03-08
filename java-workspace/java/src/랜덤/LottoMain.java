@@ -1,0 +1,9 @@
+package ·£´ý;
+
+public class LottoMain {
+
+	public static void main(String[] args) {
+		
+		System.out.println("¿À´ÃÀÇ ·Î¶ÇÈ®·ü : " + LottoUtil.todayProbalility() + "%");
+	}
+}

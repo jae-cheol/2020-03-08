@@ -1,0 +1,27 @@
+import java.util.ArrayList;
+import java.util.List;
+
+class Patient {
+	String name;
+	public Patient(String name) {
+		this.name = name;
+	}
+}
+
+public class test {
+	public static void main(String[] args){
+		List ps = new ArrayList();
+		Patient p2 = new Patient("Mike");
+		Patient p3 = new Patient("Mikee");
+		ps.add(Patient("Mike"));
+		ps.add(p3);
+		
+		int f = ps.indexOf(p3);
+		System.out.println(f);
+		
+		if(f>=0) {
+			System.out.println("Mike Found");
+		}
+		
+	}
+}

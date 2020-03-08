@@ -1,0 +1,9 @@
+package exam.code1Z0_808.No_139;
+
+public class Shirt {
+	public static void main(String[] args) {
+		public static String getColor() {
+			return "Green";
+		}
+	}
+}

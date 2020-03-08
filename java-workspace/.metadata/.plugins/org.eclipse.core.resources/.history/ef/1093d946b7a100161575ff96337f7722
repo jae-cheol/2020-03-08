@@ -1,0 +1,22 @@
+package 인터페이스2;
+/*
+ * 인터페이스 안의 함수는 public abstract 생략 가능.
+ * 		      멤버변수는 public static final 생략 가능.
+ */
+public interface TV {
+	public static final int MIN_VOLUME = 0;
+	/*public static final*/ int MAX_VOLUME = 70;
+	
+	/*public abstract*/ void powerOn();
+	void powerOff();
+	void volumeUp();
+	void volumeDown();
+	void channelUp();
+	void channelDown();
+	void mute();
+
+	// 접근제한자 default 가 아님.
+	default public void copyright() { 
+		System.out.println("모든 저작권은 TV회사에 귀속됩니다.");
+	}
+}

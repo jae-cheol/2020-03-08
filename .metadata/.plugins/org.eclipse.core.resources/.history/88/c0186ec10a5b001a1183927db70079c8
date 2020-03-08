@@ -1,0 +1,43 @@
+package contents.casting;
+
+public class CastMain01 {
+
+//	static void print(Child01 c) {
+//		c.info();
+//	}
+//	
+//	static void print(Child02 c) {
+//		c.info();
+//	}
+	static void print(Parent p) {	// 묵시적 형변환
+		p.info();
+		if(p instanceof Child01) {
+			Child01 c = (Child01)p;	// 명시적 형변환
+			c.study();
+			c.sleep();
+		} else if(p instanceof Child02) {
+			Child02 c = (Child02)p; // 명시적 형변환
+			c.sing();
+			c.play();
+		}
+	}
+	
+	public static void main(String[] args) {
+		Child01 c01 = new Child01();
+//		c01.info();
+		print(c01);
+		c01.study();
+		c01.sleep();
+		Child02 c02 = new Child02();
+//		c02.info();
+		print(c02);
+		c02.sing();
+		c02.play();
+		Parent p = new Parent();
+//		p.info();
+		print(p);
+		Parent p2 = new Child01();	// 묵시적형변환
+		p2.info();
+//		p2.sleep();
+	}
+}

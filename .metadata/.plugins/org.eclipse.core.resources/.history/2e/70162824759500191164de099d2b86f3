@@ -1,0 +1,8 @@
+
+public class test {
+	public static void main(String[] args){
+		String[] strs = new String[2];
+		System.out.println(strs[0]);
+		System.out.println(strs[1]);
+	}
+}

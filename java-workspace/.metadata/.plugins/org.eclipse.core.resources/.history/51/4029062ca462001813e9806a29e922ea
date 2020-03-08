@@ -1,0 +1,48 @@
+import java.util.Scanner;
+/*
+ * 10보다 작은 수 앞에 입력으로 0 을 넣어준다는 의미는 아님.! 
+ */
+public class Main {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+		int num = sc.nextInt();
+		int a = 0;
+		int b = 0;
+		int sum = 0;
+		
+		if(num >= 0 && num <= 99) {
+//			while(true) {
+//				sum += (numInit%10 + numInit/10);
+//				System.out.println("sum : " + sum);
+//				if(sum == numInit) break;
+//			}
+			for(int i=0; i<10; i++) {
+				// 입력한값이 10보다 작으면.
+				if(num < 10) {
+					num *= 11;
+				}
+				
+//				if(i == 0) {
+//					a = num/10;	// 10의 자리.
+//					b = num%10;	//  1의 자리.
+					//sum = a + b;
+					sum = num/10 + num%10;
+					
+					a = num%10 * 10 * 10;
+					
+					sum = a + sum;
+//				} else {
+//					a = sum/10;
+//					b = sum%10;
+//					sum = a+b;
+//				}
+				
+				System.out.println("sum : " + sum);
+				if(sum == num) break;
+			}
+			System.out.println(sum);
+		}
+	}
+}

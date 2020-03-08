@@ -1,0 +1,10 @@
+1. DateUtil.jar		.jar 임시로 만들어본 테스트
+
+
+
+
+2. ojdbc6.jar		오라클 연동 jdbc
+
+	C:\oraclexe\app\oracle\product\11.2.0\server\jdbc\lib
+	오라클11 - 6.jar 파일
+	오라클10 - 14.jar 파일 (인터넷은 6.jar도 읽혀짐)

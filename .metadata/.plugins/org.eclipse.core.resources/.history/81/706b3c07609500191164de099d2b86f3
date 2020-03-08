@@ -1,0 +1,18 @@
+class Shirt {
+	public static String getColor() {
+		return "Green";
+	}
+}
+
+public class test {
+	public void matchShirt() {
+		String color = Shirt.getColor();
+		if(color.equals("Green")) {
+			System.out.println("Fit");
+		}
+	}
+	public static void main(String[] args){
+		test trouser = new test();
+		trouser.matchShirt();
+	}
+}

@@ -1,0 +1,25 @@
+package exam.code1Z0_808;
+
+class Animal {
+	String type = "Canine";
+	int maxSpeed = 60;
+	
+	Animal() {}
+	Animal(String type, int maxSpeed) {
+		this.type = type;
+		this.maxSpeed = maxSpeed;
+	}
+}
+
+class WildAnimal extends Animal {
+	String bounds;
+	
+	WildAnimal(String bounds) {
+		
+	}
+}
+
+public class No_87 {
+	public static void main(String[] args) {
+	}
+}

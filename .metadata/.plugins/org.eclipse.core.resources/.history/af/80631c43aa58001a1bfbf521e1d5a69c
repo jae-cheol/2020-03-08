@@ -1,0 +1,26 @@
+package exam.code1Z0_808;
+
+class C2{
+	public void displayC2() {
+		System.out.println("C2");
+	}
+}
+
+interface I {
+	public void displayI();
+}
+
+class C1 extends C2 implements I {
+	public void displayI() {
+		System.out.println("C1");
+	}
+}
+
+public class No_88 {
+	public static void main(String[] args) {
+		C2 obj1 = new C1();
+		System.out.println(obj1 instanceof C1);
+		System.out.println(obj1 instanceof C2);
+		System.out.println(obj1.displayC2());
+	}
+}

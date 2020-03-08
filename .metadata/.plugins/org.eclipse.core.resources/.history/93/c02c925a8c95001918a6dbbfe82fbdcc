@@ -1,0 +1,15 @@
+class Exportable {
+	public void export() {};
+}
+
+class Tool extends Exportable {
+	protected void export() {
+		System.out.println("Tool::export");
+	}
+}
+
+public class test {
+	public static void main(String[] args){
+		
+	}
+}

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy package &apos;교환&apos; to &apos;백준/src&apos;&#x0D;&#x0A;- Original project: &apos;346&apos;&#x0D;&#x0A;- Destination element: &apos;백준/src&apos;&#x0D;&#x0A;- Original element: &apos;346/src/교환&apos;" description="Copy package" destination="=백준/src" element1="/src&lt;교환" flags="589830" fragments="1" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyPackages" stamp="1544120181281" version="1.0"/>
+</session>

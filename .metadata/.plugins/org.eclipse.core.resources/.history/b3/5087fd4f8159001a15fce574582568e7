@@ -1,0 +1,16 @@
+package exam.code1Z0_808.No_139.pants;
+
+import exam.code1Z0_808.No_139.*;
+
+public class Jeans {
+	public void matchShirt() {
+		String color = getColor();
+		if(color.equals("Green")) {
+			System.out.println("Fit");
+		}
+	}
+	public static void main(String[] args) {
+		Jeans trouser = new Jeans();
+		trouser.matchShirt();
+	}
+}

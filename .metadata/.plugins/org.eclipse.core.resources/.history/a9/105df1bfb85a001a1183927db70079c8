@@ -1,0 +1,19 @@
+
+class Math {
+	int add(int a, int b) {
+		return a+b;
+	}
+}
+class Calculator extends Math {
+	Integer add(int a, int b) {
+		return a+b+1;
+	}
+}
+
+public class IntegerMethod {
+
+	public static void main(String[] args) {
+		
+	}
+
+}

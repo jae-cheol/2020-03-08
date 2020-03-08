@@ -1,0 +1,18 @@
+package exam.code1Z0_808;
+
+public class No_123 {
+	int x, y;
+	
+	public No_123(int x, int y) {
+		init(x,y);
+	}
+	public void init(int x, int y) {
+		this.x = x*x;
+		this.y = y*y;
+	}
+	public static void main(String[] args) {
+		int x=3, y=5;
+		No_123 obj = new No_123(x,y);
+		System.out.println(x + " " + y);
+	}
+}

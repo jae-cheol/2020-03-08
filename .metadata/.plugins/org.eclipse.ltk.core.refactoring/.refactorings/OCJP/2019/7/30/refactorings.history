@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename package &apos;Incentive&apos; to &apos;Insentive&apos;&#x0D;&#x0A;- Original project: &apos;OCJP&apos;&#x0D;&#x0A;- Original element: &apos;OCJP/src/Incentive&apos;&#x0D;&#x0A;- Renamed element: &apos;OCJP/src/Insentive&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename package &apos;Incentive&apos;" flags="589830" hierarchical="false" id="org.eclipse.jdt.ui.rename.package" input="/src&lt;Incentive" name="Insentive" qualified="false" references="true" stamp="1563721583410" textual="false" version="1.0"/>
+</session>

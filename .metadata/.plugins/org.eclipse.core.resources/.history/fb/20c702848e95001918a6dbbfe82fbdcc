@@ -1,0 +1,15 @@
+interface Exportable {
+	void export();
+}
+
+class Tool implements Exportable {
+	public void export() {
+		System.out.println("Tool::export");
+	}
+}
+
+public class test {
+	public static void main(String[] args){
+		
+	}
+}

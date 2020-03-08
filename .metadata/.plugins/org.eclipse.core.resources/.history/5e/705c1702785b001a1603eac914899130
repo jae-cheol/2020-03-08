@@ -1,0 +1,14 @@
+package exam.code1Z0_808;
+
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+
+public class No_107 extends A{
+	public static void main(String[] args) {
+		String date = LocalDate
+//				.parse("2014-05-04")	// 날짜와 시간 문자열로 인스턴스를 만드는법
+//				.format(DateTimeFormatter.ISO_DATE_TIME);
+		.parse("2014-05-04");
+		System.out.println(date);
+	}
+}

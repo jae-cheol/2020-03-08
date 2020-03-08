@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move 3 elements to &apos;OCJP/src/contents.casting&apos;&#x0D;&#x0A;- Original project: &apos;java-workspace&apos;&#x0D;&#x0A;- Destination element: &apos;OCJP/src/contents.casting&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     Parent.java&#x0D;&#x0A;     CastMain02.java&#x0D;&#x0A;     CastMain01.java&#x0D;&#x0A;- Update references to refactored element" description="Move files" destination="=OCJP/src&lt;contents.casting" element1="java/src/형변환/Parent.java" element2="java/src/형변환/CastMain02.java" element3="java/src/형변환/CastMain01.java" files="3" flags="589830" folders="0" id="org.eclipse.jdt.ui.move" policy="org.eclipse.jdt.ui.moveResources" qualified="false" references="true" stamp="1582970890940" units="0" version="1.0"/>
+</session>

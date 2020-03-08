@@ -1,0 +1,11 @@
+package exam.code1Z0_808;
+
+import java.util.Arrays;
+
+public class No_137 {
+	public static void main(String[] args) {
+		String s = "Java Duke";
+		int len = s.trim().length();
+		System.out.println(len);
+	}
+}

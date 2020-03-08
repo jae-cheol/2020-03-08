@@ -1,0 +1,11 @@
+package exam.code1Z0_808;
+
+public class No_44 {
+
+	public static void main(String[] args) {
+		StringBuilder sb = new StringBuilder();
+		sb.append("asdfasfd");
+		System.out.println(sb.toString());
+	}
+
+}

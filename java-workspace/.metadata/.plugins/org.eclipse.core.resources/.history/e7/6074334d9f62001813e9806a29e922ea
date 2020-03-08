@@ -1,0 +1,27 @@
+import java.util.Scanner;
+/*
+ * 10보다 작은 수 앞에 입력으로 0 을 넣어준다는 의미는 아님.! 
+ */
+public class Main {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+		String s = sc.next();
+		int numInit = 0;
+		int sum = 0;
+		
+		if(Integer.parseInt(s) >= 0 && Integer.parseInt(s) <= 99) {
+			if(Integer.parseInt(s) < 10) {
+				s = "0" + s;
+			}
+			numInit = Integer.parseInt(s);
+			
+			while(true) {
+				sum += (numInit%10 + numInit/10);
+				if(sum == numInit) break;
+			}
+			System.out.println(sum);
+		}
+	}
+}

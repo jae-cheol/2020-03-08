@@ -1,0 +1,25 @@
+1) char c = sc.nextLine().charAt(0);	// 한 문자 입력.
+
+2)	기본생성자       	 : alt + shift + s 누른후, c선택
+	매개변수생성자 	 : alt + shift + s 누른후, o선택
+	getter/setter : alt + shift + s 누른후, r선택 
+	toString()    : alt + shift + s 누른후, s선택
+	override      : alt + shift + s 누른후, v선택
+	
+3-1)	기본자료형(8가지)
+		- 논리	: boolean
+		- 문자	: char
+		- 정수	: byte, short, int(default), long
+		- 실수	: float, double(default)
+		
+		+ 사용자 정의 자료형(생성하는 클래스...)
+
+3-2)         < char  <
+  		byte < short < int < long < float < double
+
+4) toString() --> String형태로 바꿔주는 메소드.
+
+5) euc-kr : 2바이트
+   utf-8  : 3바이트
+   
+6) System.exit(0); // 종료.

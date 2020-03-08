@@ -1,0 +1,10 @@
+package exam.code1Z0_808;
+
+public class No_131 {
+	public static String maskCC(String creditCard) {
+		String x = "XXXX-XXXX-XXXX-";
+	}
+	public static void main(String[] args) {
+		System.out.println(maskCC("1234-5678-9101-1121"));
+	}
+}

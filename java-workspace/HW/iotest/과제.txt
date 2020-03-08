@@ -1,0 +1,28 @@
+class Member {
+	private String name;
+	private String id;
+	private String phone;
+
+    public static   jsonParse() {
+
+    }
+
+    public void jsonSave() {
+    }
+}
+
+class Main {
+  public static void main() {
+     Member m = Member.jsonParse("json.txt");
+     System.out.println("이름 : " + m.getName());
+
+     List<Member> list = Member.jsonParseArray("json2.txt");
+     for(Member m : list) {
+     }
+  }
+}
+
+// 실행결과
+이름 : 홍길동
+id : hong
+전화번호 : 010-1111-2222

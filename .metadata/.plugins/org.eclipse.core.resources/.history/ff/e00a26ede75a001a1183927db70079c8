@@ -1,0 +1,29 @@
+package contents.casting;
+
+import java.util.ArrayList;
+import java.util.Random;
+import java.util.Scanner;
+
+public class CastMain02 {
+
+	public static void main(String[] args) {
+		
+		// 자동캐스팅 : 작은것을 큰것에 넣을때
+			// 작은것 - 상속관계의 서브클래스
+			// 큰것 - 상속관계의 슈퍼클래스
+		// 직접캐스팅해줘야함 : 큰것을 작은것에 넣을때 - 명시적형변환
+		// 이러지않으면 컴파일에러가 발생함.
+		
+		// 큰것에 작은것을 넣음.
+		Parent p = new Child01();
+		p.info();
+		System.out.println(p.name);
+		// 작은것에 큰것을 넣음.
+		Child01 c = (Child01)p;		// 명시적형변환
+		
+		c.info();
+		c.sleep();
+		c.study();
+		
+	}
+}

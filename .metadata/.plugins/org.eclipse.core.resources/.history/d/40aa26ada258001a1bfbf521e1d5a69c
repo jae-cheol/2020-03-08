@@ -1,0 +1,20 @@
+package exam.code1Z0_808;
+
+class Student {
+	String name;
+	public Student(String name) {
+		this.name = name;
+	}
+}
+
+public class No_64 {
+
+	public static void main(String[] args) {
+		Student[] st = new Student[3];
+		st[1] = new Student("Richard");
+		st[2] = new Student("Donald");
+		for(Student s : st) {
+			System.out.println("" + s.name);
+		}
+	}
+}
