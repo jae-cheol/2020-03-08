@@ -1,3 +1,0 @@
-if(arr.length < arr[j]) {
-					return false;
-				}
