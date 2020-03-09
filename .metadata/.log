@@ -3301,3 +3301,15 @@ java.lang.NoSuchMethodException: org.eclipse.jdt.internal.ui.javaeditor.JavaSour
 
 !ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-03-09 22:48:13.347
 !MESSAGE executing callback sts4.classpath.NwQUAduw SUCCESS [done]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-03-09 22:53:50.793
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.NwQUAduw
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-03-09 22:53:50.801
+!MESSAGE unsubscribing from classpath changes: sts4.classpath.NwQUAduw
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-03-09 22:53:50.809
+!MESSAGE subsribers = null
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-03-09 22:53:50.816
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.NwQUAduw => OK
