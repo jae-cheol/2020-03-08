@@ -2,10 +2,10 @@ package kr.co.bit.pokemon.vo;
 
 public abstract class PlayVO {
 	
-	 protected String id;				// ÄÉ¸¯ÅÍ ¾ÆÀÌµğ
-	 protected int offensive = 0;		// °ø°İ·Â
-	 protected int defensive = 0; 		// ¹æ¾î·Â
-	 protected int life = 0;			// Ã¼·Â
+	 protected String id;				// ì¼€ë¦­í„° ì•„ì´ë””
+	 protected int offensive = 0;		// ê³µê²©ë ¥
+	 protected int defensive = 0; 		// ë°©ì–´ë ¥
+	 protected int life = 0;			// ì²´ë ¥
 	 
 	 public abstract void PrintHp(String name);
 	 public abstract String toString();

@@ -11,9 +11,9 @@ public class PokemonGuideBookUI extends BaseUI {
 	public void execute() throws Exception {
 		List<PokemonVO> list = service.selectPokemonBookList();
 
-		System.out.println("µµ°¨ Æ÷ÄÏ¸ó ¸ñ·Ï : " + list.size() + " ¸¶¸®");
+		System.out.println("ë„ê° í¬ì¼“ëª¬ ëª©ë¡ : " + list.size() + " ë§ˆë¦¬");
 		System.out.println("-------------------------------------------------------");
-		System.out.println("ÀÌ¸§\t°ø°İ·Â\t¹æ¾î·Â\t°¡°İ\tÈñ±Íµµ\tÃ¼·Â");
+		System.out.println("ì´ë¦„\tê³µê²©ë ¥\të°©ì–´ë ¥\tê°€ê²©\tí¬ê·€ë„\tì²´ë ¥");
 		System.out.println("-------------------------------------------------------");
 		for (PokemonVO p : list) {
 			System.out.println(p.getName() + "\t" + p.getOffensive() + "\t" + p.getDefensive() + "\t" + p.getPrice()
@@ -21,7 +21,7 @@ public class PokemonGuideBookUI extends BaseUI {
 		}
 		UserInfoVO ui = service.money();
 		if (list.isEmpty()) {
-			System.out.println("Æ÷ÄÏ¸óÀ» ÀâÀº ÀûÀÌ ¾ø±º¿ä. »ç³ÉÀ» ¶°³ªºÁ¿ä!");
+			System.out.println("í¬ì¼“ëª¬ì„ ì¡ì€ ì ì´ ì—†êµ°ìš”. ì‚¬ëƒ¥ì„ ë– ë‚˜ë´ìš”!");
 			System.out.println("-------------------------------------------------------");
 		}
 

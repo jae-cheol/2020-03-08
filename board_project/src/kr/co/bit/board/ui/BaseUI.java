@@ -26,7 +26,7 @@ public abstract class BaseUI implements IBoardUI {
     }
 
 }
-// ¹«Á¶°Ç ½ºÆ®¸µÀ¸·Î ¹Þ°í --> Á¤¼ö·Î ¹Ù²ãÁÜ
+// ë¬´ì¡°ê±´ ìŠ¤íŠ¸ë§ìœ¼ë¡œ ë°›ê³  --> ì •ìˆ˜ë¡œ ë°”ê¿”ì¤Œ
 	/*
 	 * String str = sc.nextLine();
 	 * int num = Integer.parseInt(str);

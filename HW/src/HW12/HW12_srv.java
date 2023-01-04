@@ -8,11 +8,11 @@ import java.net.ServerSocket;
 import java.net.Socket;
 
 /*
- * Á¢¼ÓÇÑ Å¬¶óÀÌ¾ğÆ®ÀÇ Á¤º¸ : [/127.0.0.1]
-Àü¼ÛµÈ ¸Ş¼¼Áö : hello
-Àü¼ÛµÈ ¸Ş¼¼Áö : ÇÏÀÌ
-Àü¼ÛµÈ ¸Ş¼¼Áö : bye
-/127.0.0.1 ¿¬°áÀ» Á¾·áÇÕ´Ï´Ù.
+ * ì ‘ì†í•œ í´ë¼ì´ì–¸íŠ¸ì˜ ì •ë³´ : [/127.0.0.1]
+ì „ì†¡ëœ ë©”ì„¸ì§€ : hello
+ì „ì†¡ëœ ë©”ì„¸ì§€ : í•˜ì´
+ì „ì†¡ëœ ë©”ì„¸ì§€ : bye
+/127.0.0.1 ì—°ê²°ì„ ì¢…ë£Œí•©ë‹ˆë‹¤.
  */
 public class HW12_srv {
 
@@ -20,30 +20,30 @@ public class HW12_srv {
 
 		try {
 			ServerSocket server = new ServerSocket(10000);
-			System.out.println("Å¬¶óÀÌ¾ğÆ®ÀÇ ¿äÃ»À» ±â´Ù¸³´Ï´Ù.");
+			System.out.println("í´ë¼ì´ì–¸íŠ¸ì˜ ìš”ì²­ì„ ê¸°ë‹¤ë¦½ë‹ˆë‹¤.");
 
 			Socket client = server.accept();
-			System.out.println("Á¢¼ÓµÈ Å¬¶óÀÌ¾ğÆ®ÀÇ Á¤º¸ : " + client.getLocalAddress());
+			System.out.println("ì ‘ì†ëœ í´ë¼ì´ì–¸íŠ¸ì˜ ì •ë³´ : " + client.getLocalAddress());
 			
 			String msg = null;
 			OutputStream os = client.getOutputStream();
 			DataOutputStream dos = new DataOutputStream(os);
 			
-			InputStream is = client.getInputStream();	// outputstreamÀ¸·Î ³¯¶ó¿ÔÀ¸´Ï ÀÎÇ²À¸·Î.
+			InputStream is = client.getInputStream();	// outputstreamìœ¼ë¡œ ë‚ ë¼ì™”ìœ¼ë‹ˆ ì¸í’‹ìœ¼ë¡œ.
 			DataInputStream dis = new DataInputStream(is);
 			while (true) {
 				msg = dis.readUTF();
 				if(msg.equals("quit")) {
-					System.out.println("¼­¹ö¸¦ Á¾·áÇÕ´Ï´Ù.");
+					System.out.println("ì„œë²„ë¥¼ ì¢…ë£Œí•©ë‹ˆë‹¤.");
 					server.close();
 					break;
 				}
 				dos.writeUTF(msg);
-				System.out.println("Àü¼ÛµÈ ¸Ş½ÃÁö : " + msg);
+				System.out.println("ì „ì†¡ëœ ë©”ì‹œì§€ : " + msg);
 			}
-			System.out.println(client.getLocalAddress() + " ¿¬°áÀ» Á¾·áÇÕ´Ï´Ù.");
+			System.out.println(client.getLocalAddress() + " ì—°ê²°ì„ ì¢…ë£Œí•©ë‹ˆë‹¤.");
 			// OutputStreamWriter osw = new OutputStreamWriter(os, "utf-8"); //
-			// ÇÑ±Û·Î ¹Ù²ãÁÖ´Â
+			// í•œê¸€ë¡œ ë°”ê¿”ì£¼ëŠ”
 			// osw.write(msg);
 		} catch (Exception e) {
 			e.printStackTrace();

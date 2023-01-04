@@ -14,14 +14,14 @@ public class ScissorsRockPaper implements Game {
 			System.out.println("You win");
 			return 1;
 		} else if(me == you) {
-			System.out.println("ºñ°å½À´Ï´Ù.");
+			System.out.println("ë¹„ê²¼ìŠµë‹ˆë‹¤.");
 			return 0;
 		} else { // (me+1)%3 != you
 			System.out.println("You lose");
 			return 0;
 		}
 //		if(me == you) {
-//			System.out.println("ºñ°å½À´Ï´Ù.");
+//			System.out.println("ë¹„ê²¼ìŠµë‹ˆë‹¤.");
 //			return 0;
 //		} else if(me == 1 && you == 3 || me == 2 && you == 1 || me == 3 && you == 2) {
 //			System.out.println("You lose");

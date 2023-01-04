@@ -3,15 +3,15 @@ package HW12;
 import java.util.Random;
 
 /*
- * 2. È«¼ö°¡ ¹ß»ýÇØ¼­ ÀÌÀç¹ÎÀÌ ¹ß»ýÇß½À´Ï´Ù.
-¹æ¼Û±¹À» ÅëÇØ ¼º±ÝÀ» ¸ð±ÝÇÕ´Ï´Ù.
-¹æ¼ÛÁß ÄÝ¼¾ÅÍ 1-4¹ø±îÁö ÀüÈ­¸¦ °É¾î ¼º±ÝÀ» ÇØÁÖ½Ã±â¸¦¹Ù¶ø´Ï´Ù.
-¹æ¼ÛÀÌ Á¾·áµÇ¸é ¸ð±ÝµÈ ¼º±Ý ÃÑ¾×À» ¾Ë·Áµå¸®°Ú½À´Ï´Ù.
+ * 2. í™ìˆ˜ê°€ ë°œìƒí•´ì„œ ì´ìž¬ë¯¼ì´ ë°œìƒí–ˆìŠµë‹ˆë‹¤.
+ë°©ì†¡êµ­ì„ í†µí•´ ì„±ê¸ˆì„ ëª¨ê¸ˆí•©ë‹ˆë‹¤.
+ë°©ì†¡ì¤‘ ì½œì„¼í„° 1-4ë²ˆê¹Œì§€ ì „í™”ë¥¼ ê±¸ì–´ ì„±ê¸ˆì„ í•´ì£¼ì‹œê¸°ë¥¼ë°”ëžë‹ˆë‹¤.
+ë°©ì†¡ì´ ì¢…ë£Œë˜ë©´ ëª¨ê¸ˆëœ ì„±ê¸ˆ ì´ì•¡ì„ ì•Œë ¤ë“œë¦¬ê² ìŠµë‹ˆë‹¤.
 
-Á¦¾àÁ¶°Ç>
-1-4¹ø±îÁöÀÇ ÄÝ¼¾ÅÍ´Â °¢°¢ 10ÅëÀÇ ÀüÈ­¸¦ ¹ÞÀ» ¼ö ÀÖ½À´Ï´Ù.
-¼º±ÝÀº 1000-10000¿ø»çÀÌ·Î 1000¿ø´ÜÀ§·Î ·£´ýÇÏ°Ô ÃßÃâµÈ´Ù°í °¡Á¤.
-°¢ ÄÝ¼¾ÅÍ¿¡¼­´Â 10ÅëÀÇ ÀüÈ­¸¦ ¹ÞÀº ÈÄ °¢ ÄÝ¼¾ÅÍÀÇ ÃÑ¼º±ÝÀ» Ãâ·ÂÇÏ°í 4°³ÀÇ ÄÝ¼¾ÅÍ ÃÑ¾×À» Ãâ·Â
+ì œì•½ì¡°ê±´>
+1-4ë²ˆê¹Œì§€ì˜ ì½œì„¼í„°ëŠ” ê°ê° 10í†µì˜ ì „í™”ë¥¼ ë°›ì„ ìˆ˜ ìžˆìŠµë‹ˆë‹¤.
+ì„±ê¸ˆì€ 1000-10000ì›ì‚¬ì´ë¡œ 1000ì›ë‹¨ìœ„ë¡œ ëžœë¤í•˜ê²Œ ì¶”ì¶œëœë‹¤ê³  ê°€ì •.
+ê° ì½œì„¼í„°ì—ì„œëŠ” 10í†µì˜ ì „í™”ë¥¼ ë°›ì€ í›„ ê° ì½œì„¼í„°ì˜ ì´ì„±ê¸ˆì„ ì¶œë ¥í•˜ê³  4ê°œì˜ ì½œì„¼í„° ì´ì•¡ì„ ì¶œë ¥
 
  */
 class Sync {
@@ -29,7 +29,7 @@ class Sync {
 	public void a() {
 		int cnt = 0, sum = 0, temp=0;
 		for (int i = 0; i < 10; i++) {
-			System.out.println("1¹ø ÄÝ¼¾ÅÍ : " + donation() + "¿øÀ» ¹Þ¾Ò½À´Ï´Ù.");
+			System.out.println("1ë²ˆ ì½œì„¼í„° : " + donation() + "ì›ì„ ë°›ì•˜ìŠµë‹ˆë‹¤.");
 			cnt++;
 			temp = donation();
 			synchronized(this){
@@ -37,7 +37,7 @@ class Sync {
 			}
 			sum += temp;
 			if (cnt == 10) {
-				System.out.println("1¹ø ÄÝ¼¾ÅÍ¿¡¼­ÀÇ ÃÑ ¸ð±Ý¾× : " + sum);
+				System.out.println("1ë²ˆ ì½œì„¼í„°ì—ì„œì˜ ì´ ëª¨ê¸ˆì•¡ : " + sum);
 			}
 		}
 	}
@@ -45,7 +45,7 @@ class Sync {
 	public void b() {
 		int cnt = 0, sum = 0, temp=0;
 		for (int i = 0; i < 10; i++) {
-			System.out.println("2¹ø ÄÝ¼¾ÅÍ : " + donation() + "¿øÀ» ¹Þ¾Ò½À´Ï´Ù.");
+			System.out.println("2ë²ˆ ì½œì„¼í„° : " + donation() + "ì›ì„ ë°›ì•˜ìŠµë‹ˆë‹¤.");
 			cnt++;
 			temp = donation();
 			synchronized(this){
@@ -53,7 +53,7 @@ class Sync {
 			}
 			sum += temp;
 			if (cnt == 10) {
-				System.out.println("2¹ø ÄÝ¼¾ÅÍ¿¡¼­ÀÇ ÃÑ ¸ð±Ý¾× : " + sum);
+				System.out.println("2ë²ˆ ì½œì„¼í„°ì—ì„œì˜ ì´ ëª¨ê¸ˆì•¡ : " + sum);
 			}
 		}
 	}
@@ -61,7 +61,7 @@ class Sync {
 	public void c() {
 		int cnt = 0, sum = 0, temp=0;
 		for (int i = 0; i < 10; i++) {
-			System.out.println("3¹ø ÄÝ¼¾ÅÍ : " + donation() + "¿øÀ» ¹Þ¾Ò½À´Ï´Ù.");
+			System.out.println("3ë²ˆ ì½œì„¼í„° : " + donation() + "ì›ì„ ë°›ì•˜ìŠµë‹ˆë‹¤.");
 			cnt++;
 			temp = donation();
 			synchronized(this){
@@ -69,7 +69,7 @@ class Sync {
 			}
 			sum += temp;
 			if (cnt == 10) {
-				System.out.println("3¹ø ÄÝ¼¾ÅÍ¿¡¼­ÀÇ ÃÑ ¸ð±Ý¾× : " + sum);
+				System.out.println("3ë²ˆ ì½œì„¼í„°ì—ì„œì˜ ì´ ëª¨ê¸ˆì•¡ : " + sum);
 			}
 		}
 	}
@@ -77,7 +77,7 @@ class Sync {
 	public void d() {
 		int cnt = 0, sum = 0, temp=0;
 		for (int i = 0; i < 10; i++) {
-			System.out.println("4¹ø ÄÝ¼¾ÅÍ : " + donation() + "¿øÀ» ¹Þ¾Ò½À´Ï´Ù.");
+			System.out.println("4ë²ˆ ì½œì„¼í„° : " + donation() + "ì›ì„ ë°›ì•˜ìŠµë‹ˆë‹¤.");
 			cnt++;
 			temp = donation();
 			synchronized(this){
@@ -85,7 +85,7 @@ class Sync {
 			}
 			sum += temp;
 			if (cnt == 10) {
-				System.out.println("4¹ø ÄÝ¼¾ÅÍ¿¡¼­ÀÇ ÃÑ ¸ð±Ý¾× : " + sum);
+				System.out.println("4ë²ˆ ì½œì„¼í„°ì—ì„œì˜ ì´ ëª¨ê¸ˆì•¡ : " + sum);
 			}
 		}
 	}
@@ -123,7 +123,7 @@ class SyncThread extends Thread {
 public class HW12_2 {
 
 	public static void main(String[] args) {
-		System.out.println("ÀüÈ­¹øÈ£ 1 - 4¹ø±îÁö 1000¿ø ~ 10000¿ø»çÀÌ·Î ±Ý¾×À» º¸³»ÁÖ½Ã±æ ¹Ù¶ø´Ï´Ù.");
+		System.out.println("ì „í™”ë²ˆí˜¸ 1 - 4ë²ˆê¹Œì§€ 1000ì› ~ 10000ì›ì‚¬ì´ë¡œ ê¸ˆì•¡ì„ ë³´ë‚´ì£¼ì‹œê¸¸ ë°”ëžë‹ˆë‹¤.");
 		Sync sync = new Sync();
 
 		SyncThread st = new SyncThread(sync, 1);
@@ -145,7 +145,7 @@ public class HW12_2 {
 			e.printStackTrace();
 		}
 		
-		System.out.println("ÃÑ °ÅµÐ ¼¼±Ý");
+		System.out.println("ì´ ê±°ë‘” ì„¸ê¸ˆ");
 		System.out.println(sync.getM());
 	}
 }

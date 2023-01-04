@@ -43,14 +43,14 @@ public class PokemonVO extends PlayVO {
 
 	@Override
 	public String toString() {
-		return "Æ÷ÄÏ¸ó µµ°¨ [Æ÷ÄÏ¸ó ÀÌ¸§ =" + name + ", °ø°İ·Â =" + offensive + ", ¹æ¾î·Â = " + defensive + ", °¡°İ =" + price
-				+ ", Èñ±Íµµ=" + rarity + "]";
+		return "í¬ì¼“ëª¬ ë„ê° [í¬ì¼“ëª¬ ì´ë¦„ =" + name + ", ê³µê²©ë ¥ =" + offensive + ", ë°©ì–´ë ¥ = " + defensive + ", ê°€ê²© =" + price
+				+ ", í¬ê·€ë„=" + rarity + "]";
 	}
 	
 	@Override
 	public void PrintHp(String user_name)
 	{
-		System.out.println(user_name + "ÀÇ °ø°İÀ» ¹ŞÀ½. " + this.name+" ³²Àº Ã¼·Â : " + this.life);
+		System.out.println(user_name + "ì˜ ê³µê²©ì„ ë°›ìŒ. " + this.name+" ë‚¨ì€ ì²´ë ¥ : " + this.life);
 	}
 	
 	public void setStat(String name, int offensive, int defensive, int price, int rarity, int life)

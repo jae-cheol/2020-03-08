@@ -7,8 +7,8 @@ public class AddUI extends BaseUI {
 	@Override
 	public void execute() throws Exception {
 
-		String title = scanStr("µî·ÏÇÒ Á¦¸ñÀ» ÀÔ·ÂÇÏ¼¼¿ä : ");
-		String writer = scanStr("µî·ÏÇÒ ±Û¾´ÀÌ¸¦ ÀÔ·ÂÇÏ¼¼¿ä : ");
+		String title = scanStr("ë“±ë¡í•  ì œëª©ì„ ì…ë ¥í•˜ì„¸ìš” : ");
+		String writer = scanStr("ë“±ë¡í•  ê¸€ì“´ì´ë¥¼ ì…ë ¥í•˜ì„¸ìš” : ");
 		
 		BoardVO board = new BoardVO();
 		board.setTitle(title);
@@ -16,7 +16,7 @@ public class AddUI extends BaseUI {
 		
 		service.insertBoard(board);
 		
-		System.out.println("°Ô½ÃÆÇ µî·ÏÀ» ¿Ï·áÇÏ¿´½À´Ï´Ù.");
+		System.out.println("ê²Œì‹œíŒ ë“±ë¡ì„ ì™„ë£Œí•˜ì˜€ìŠµë‹ˆë‹¤.");
 	}
 
 	

@@ -1,25 +1,20 @@
-1) char c = sc.nextLine().charAt(0);	// ÇÑ ¹®ÀÚ ÀÔ·Â.
+1) char c = sc.nextLine().charAt(0);	// í•œ ë¬¸ì ì…ë ¥.
 
-2)	±âº»»ı¼ºÀÚ       	 : alt + shift + s ´©¸¥ÈÄ, c¼±ÅÃ
-	¸Å°³º¯¼ö»ı¼ºÀÚ 	 : alt + shift + s ´©¸¥ÈÄ, o¼±ÅÃ
-	getter/setter : alt + shift + s ´©¸¥ÈÄ, r¼±ÅÃ 
-	toString()    : alt + shift + s ´©¸¥ÈÄ, s¼±ÅÃ
-	override      : alt + shift + s ´©¸¥ÈÄ, v¼±ÅÃ
+2)	ê¸°ë³¸ìƒì„±ì       	 : alt + shift + s ëˆ„ë¥¸í›„, cì„ íƒ
+	ë§¤ê°œë³€ìˆ˜ìƒì„±ì 	 : alt + shift + s ëˆ„ë¥¸í›„, oì„ íƒ
+	getter/setter : alt + shift + s ëˆ„ë¥¸í›„, rì„ íƒ 
+	toString()    : alt + shift + s ëˆ„ë¥¸í›„, sì„ íƒ
+	override      : alt + shift + s ëˆ„ë¥¸í›„, vì„ íƒ
 	
-3-1)	±âº»ÀÚ·áÇü(8°¡Áö)
-		- ³í¸®	: boolean
-		- ¹®ÀÚ	: char
-		- Á¤¼ö	: byte, short, int(default), long
-		- ½Ç¼ö	: float, double(default)
+3-1)	ê¸°ë³¸ìë£Œí˜•(8ê°€ì§€)
+		- ë…¼ë¦¬	: boolean
+		- ë¬¸ì	: char
+		- ì •ìˆ˜	: byte, short, int(default), long
+		- ì‹¤ìˆ˜	: float, double(default)
 		
-		+ »ç¿ëÀÚ Á¤ÀÇ ÀÚ·áÇü(»ı¼ºÇÏ´Â Å¬·¡½º...)
+		+ ì‚¬ìš©ì ì •ì˜ ìë£Œí˜•(ìƒì„±í•˜ëŠ” í´ë˜ìŠ¤...)
 
-3-2)         < char  <
-  		byte < short < int < long < float < double
-
-4) toString() --> StringÇüÅÂ·Î ¹Ù²ãÁÖ´Â ¸Ş¼Òµå.
-
-5) euc-kr : 2¹ÙÀÌÆ®
-   utf-8  : 3¹ÙÀÌÆ®
+5) euc-kr : 2ë°”ì´íŠ¸
+   utf-8  : 3ë°”ì´íŠ¸
    
-6) System.exit(0); // Á¾·á.
+6) System.exit(0); // ì¢…ë£Œ.

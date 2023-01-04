@@ -14,22 +14,22 @@ public class MarketUI extends BaseUI {
 
 		List<PokemonVO> list = service.selectAllPokemonList();
 
-		System.out.println("Æ÷ÄÏ¸ó »óÁ¡ ¸ñ·Ï : " + list.size() + "°³");
+		System.out.println("í¬ì¼“ëª¬ ìƒì  ëª©ë¡ : " + list.size() + "ê°œ");
 		System.out.println("-------------------------------------------------------");
-		System.out.println("ÀÌ¸§\t°ø°İ·Â\t¹æ¾î·Â\t°¡°İ\tÈñ±Íµµ\tÃ¼·Â");
+		System.out.println("ì´ë¦„\tê³µê²©ë ¥\të°©ì–´ë ¥\tê°€ê²©\tí¬ê·€ë„\tì²´ë ¥");
 		System.out.println("-------------------------------------------------------");
 		for (PokemonVO p : list) {
 			System.out.println(p.getName() + "\t" + p.getOffensive() + "\t" + p.getDefensive() + "\t" + p.getPrice()
 					+ "\t" + p.getRarity() + "\t" + p.getLife());
 		}
 		if (list.isEmpty()) {
-			System.out.println("Á¶È¸ÇÒ Æ÷ÄÏ¸óÀÌ ¾ø½À´Ï´Ù.");
+			System.out.println("ì¡°íšŒí•  í¬ì¼“ëª¬ì´ ì—†ìŠµë‹ˆë‹¤.");
 		}
 		System.out.println("-------------------------------------------------------");
 
 		UserInfoVO ui = service.money();
-		System.out.println("ÇöÀç ÀÚ±İ :" + ui.getMoney());
-		System.out.println("1.±¸¸ÅÇÏ±â\t2.ÆÇ¸ÅÇÏ±â\t3.³ª°¡±â");
+		System.out.println("í˜„ì¬ ìê¸ˆ :" + ui.getMoney());
+		System.out.println("1.êµ¬ë§¤í•˜ê¸°\t2.íŒë§¤í•˜ê¸°\t3.ë‚˜ê°€ê¸°");
 		Scanner sc = new Scanner(System.in);
 		int a = sc.nextInt();
 
@@ -40,40 +40,40 @@ public class MarketUI extends BaseUI {
 			while (buyOK) {
 				buyOK = false;
 
-				String name = scanString("±¸¸ÅÇÒ Æ÷ÄÏ¸óÀ» ÀÔ·ÂÇÏ¼¼¿ä : ");
+				String name = scanString("êµ¬ë§¤í•  í¬ì¼“ëª¬ì„ ì…ë ¥í•˜ì„¸ìš” : ");
 
 				UserPokemonVO userPokemon = new UserPokemonVO();
 				List<PokemonVO> PokemonList = service.selectAllPokemonList();
 
 				for (PokemonVO p : PokemonList) {
 					buyOK ^= p.getName().equals(name);
-					// ±¸¸ÅÇÒ Æ÷ÄÏ¸ó ÀÌ¸§ÀÌ ¸®½ºÆ®¿¡ ÀÖ´Â°ÇÁö °Ë»ç
-					// false¿¡¼­ ÇÏ³ª¶óµµ true°¡ ÀÖ´Ù¸é ¸¶Áö¸· °á°ú´Â true
+					// êµ¬ë§¤í•  í¬ì¼“ëª¬ ì´ë¦„ì´ ë¦¬ìŠ¤íŠ¸ì— ìˆëŠ”ê±´ì§€ ê²€ì‚¬
+					// falseì—ì„œ í•˜ë‚˜ë¼ë„ trueê°€ ìˆë‹¤ë©´ ë§ˆì§€ë§‰ ê²°ê³¼ëŠ” true
 				}
 				if (buyOK == false) {
-					System.out.println(name + " ÇØ´ç  Æ÷ÄÏ¸ó Àº º¸À¯ÇÏ°í ÀÖÁö ¾Ê½À´Ï´Ù.");
+					System.out.println(name + " í•´ë‹¹  í¬ì¼“ëª¬ ì€ ë³´ìœ í•˜ê³  ìˆì§€ ì•ŠìŠµë‹ˆë‹¤.");
 					buyOK = true;
 					continue;
 				}
 
-				userPokemon.setId("·®");
+				userPokemon.setId("ëŸ‰");
 				userPokemon.setName(name);
 				PokemonVO pm = service.pmoney(name);
 
 				if (ui.getMoney() < pm.getPrice()) {
-					System.out.println("ÀÚ±İÀÌ ºÎÁ·ÇÕ´Ï´Ù.");
+					System.out.println("ìê¸ˆì´ ë¶€ì¡±í•©ë‹ˆë‹¤.");
 					break;
 				} else if (service.insertPokemon(userPokemon) == 1) {
 					service.UpdateMoney(pm.getPrice());
-					System.out.println("±¸¸Å ¿Ï·á!");
+					System.out.println("êµ¬ë§¤ ì™„ë£Œ!");
 					ui = service.money();
-					System.out.println("ÇöÀç ÀÚ±İ :" + ui.getMoney());
+					System.out.println("í˜„ì¬ ìê¸ˆ :" + ui.getMoney());
 				} else {
 					 if (service.own1Pokemon(userPokemon) == 1) {
-							System.out.println("±¸¸Å ¿Ï·á!");
+							System.out.println("êµ¬ë§¤ ì™„ë£Œ!");
 							
 						}else
-					System.out.println("ÀÌ¹Ì °¡Áö°í ÀÖ´Â Æ÷ÄÏ¸óÀÔ´Ï´Ù.");
+					System.out.println("ì´ë¯¸ ê°€ì§€ê³  ìˆëŠ” í¬ì¼“ëª¬ì…ë‹ˆë‹¤.");
 				}
 				buyOK = false;
 			}
@@ -88,18 +88,18 @@ public class MarketUI extends BaseUI {
 			while (sellOK) {
 				sellOK = false;
 				x.execute();
-				String name = scanString("ÆÇ¸ÅÇÒ Æ÷ÄÏ¸óÀ» ÀÔ·ÂÇØÁÖ¼¼¿ä : ");
+				String name = scanString("íŒë§¤í•  í¬ì¼“ëª¬ì„ ì…ë ¥í•´ì£¼ì„¸ìš” : ");
 
 				UserPokemonVO userPokemon = new UserPokemonVO();
 
 				List<PokemonVO> userPokemonList = service.selectUserPokemonList();
 				for (PokemonVO p : userPokemonList) {
 					sellOK ^= p.getName().equals(name);
-					// º¸À¯ Æ÷ÄÏ¸ó Áß¿¡¼­ ÆÇ¸ÅÇÒ Æ÷ÄÏ¸óÀÌ ÀÖ´ÂÁö °Ë»ç
-					// false¿¡¼­ ÇÏ³ª¶óµµ true°¡ ÀÖ´Ù¸é ¸¶Áö¸· °á°ú´Â true
+					// ë³´ìœ  í¬ì¼“ëª¬ ì¤‘ì—ì„œ íŒë§¤í•  í¬ì¼“ëª¬ì´ ìˆëŠ”ì§€ ê²€ì‚¬
+					// falseì—ì„œ í•˜ë‚˜ë¼ë„ trueê°€ ìˆë‹¤ë©´ ë§ˆì§€ë§‰ ê²°ê³¼ëŠ” true
 				}
 				if (sellOK == false) {
-					System.out.println(name + " ÇØ´ç  Æ÷ÄÏ¸ó Àº º¸À¯ÇÏ°í ÀÖÁö ¾Ê½À´Ï´Ù.");
+					System.out.println(name + " í•´ë‹¹  í¬ì¼“ëª¬ ì€ ë³´ìœ í•˜ê³  ìˆì§€ ì•ŠìŠµë‹ˆë‹¤.");
 					sellOK = true;
 					continue;
 				}
@@ -109,19 +109,19 @@ public class MarketUI extends BaseUI {
 				int price = -pm.getPrice();
 				service.UpdateMoney(price);
 				service.sellPokemon(userPokemon);
-				System.out.println("ÆÇ¸Å ¿Ï·á!");
+				System.out.println("íŒë§¤ ì™„ë£Œ!");
 				ui = service.money();
-				System.out.println("ÇöÀç ÀÚ±İ :" + ui.getMoney());
+				System.out.println("í˜„ì¬ ìê¸ˆ :" + ui.getMoney());
 
 				sellOK = false;
-				// ÆÇ¸Å°¡ µÇ¾úÀ¸¸é ·çÇÁ Å»Ãâ
+				// íŒë§¤ê°€ ë˜ì—ˆìœ¼ë©´ ë£¨í”„ íƒˆì¶œ
 			}
 
 			break;
 		case 3:
 			break;
 		default:
-			System.out.println("Àß¸øµÈ ÀÔ·ÂÀÔ´Ï´Ù.");
+			System.out.println("ì˜ëª»ëœ ì…ë ¥ì…ë‹ˆë‹¤.");
 		}
 
 	}

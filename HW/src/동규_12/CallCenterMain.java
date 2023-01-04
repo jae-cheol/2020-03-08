@@ -1,4 +1,4 @@
-package µ¿±Ô_12;
+package ë™ê·œ_12;
 
 import java.util.Random;
 
@@ -39,10 +39,10 @@ class CallCenter extends Thread{
 		for(int i=0;i<Constants.NUM_OF_CALL;i++){
 			int mon = Util.ran.nextInt(Constants.MAX_MONEY-Constants.MIN_MONEY+1) + Constants.MIN_MONEY;
 			total += mon;
-			System.out.println( centerNum + "¹ø Äİ¼¾ÅÍ : " + mon + "¿øÀ» ¹Ş¾Ò½À´Ï´Ù.");
+			System.out.println( centerNum + "ë²ˆ ì½œì„¼í„° : " + mon + "ì›ì„ ë°›ì•˜ìŠµë‹ˆë‹¤.");
 			money.giveMoney(mon);
 		}
-		System.out.println(centerNum + "Äİ¼¾ÅÍ ÃÑ : " + total + "¿øÀ» ¹Ş¾Ò½À´Ï´Ù.");
+		System.out.println(centerNum + "ì½œì„¼í„° ì´ : " + total + "ì›ì„ ë°›ì•˜ìŠµë‹ˆë‹¤.");
 	}
 }
 
@@ -55,11 +55,11 @@ public class CallCenterMain {
 		for(int i=0;i<Constants.NUM_OF_CENTER;i++){
 			try { calls[i].join(); } 
 			catch (InterruptedException e) {
-				System.out.println("¼¾ÅÍ »ç°í³²");
+				System.out.println("ì„¼í„° ì‚¬ê³ ë‚¨");
 				System.exit(0);
 			}
 		}
-		System.out.println("±¹¹ÎµéÀÌ º¸³»ÁÖ½Å ¼º±İ ÃÑ¾× : " + m.getMoney());
+		System.out.println("êµ­ë¯¼ë“¤ì´ ë³´ë‚´ì£¼ì‹  ì„±ê¸ˆ ì´ì•¡ : " + m.getMoney());
 	}
 }
 

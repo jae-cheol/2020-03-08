@@ -1,4 +1,4 @@
-package µ¿±Ô_12;
+package ë™ê·œ_12;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
@@ -8,7 +8,7 @@ import java.net.Socket;
 
 public class EchoServer {
 	public static void main(String[] args){
-		System.out.println("Å¬¶óÀÌ¾ğÆ® ¿äÃ»À» ±â´Ù¸³´Ï´Ù....");
+		System.out.println("í´ë¼ì´ì–¸íŠ¸ ìš”ì²­ì„ ê¸°ë‹¤ë¦½ë‹ˆë‹¤....");
 		try (
 				ServerSocket server = new ServerSocket(10006);
 				Socket client = server.accept();
@@ -19,22 +19,22 @@ public class EchoServer {
 //				OutputStreamWriter osw = new OutputStreamWriter(client.getOutputStream(), "utf-8");
 //				BufferedWriter bw = new BufferedWriter(osw);
 			){
-			System.out.println("Å¬¶óÀÌ¾ğÆ®°¡ Á¢¼Ó Çß½À´Ï´Ù!");
-			System.out.println("Å¬¶óÀÌ¾ğÆ® Á¤º¸ : " + client);
+			System.out.println("í´ë¼ì´ì–¸íŠ¸ê°€ ì ‘ì† í–ˆìŠµë‹ˆë‹¤!");
+			System.out.println("í´ë¼ì´ì–¸íŠ¸ ì •ë³´ : " + client);
 			
 			byte[] buffer = new byte[2048];
 			while(true){
 				int count = bis.read(buffer);
 				if(new String(buffer, 0, count).toLowerCase().equals("quit")) break;
-				System.out.println("Å¬¶óÀÌ¾ğÆ®°¡ º¸³»¿Â ¸Ş½ÃÁö : " + new String(buffer, 0, count));
+				System.out.println("í´ë¼ì´ì–¸íŠ¸ê°€ ë³´ë‚´ì˜¨ ë©”ì‹œì§€ : " + new String(buffer, 0, count));
 				bos.write(buffer, 0, count);
 				bos.flush();
 //				String msg = br.readLine();
 //				if(msg.toUpperCase().equals("QUIT")) break;
-//				System.out.println("Å¬¶óÀÌ¾ğÆ®°¡ º¸³»¿Â ¸Ş½ÃÁö : " + msg);
+//				System.out.println("í´ë¼ì´ì–¸íŠ¸ê°€ ë³´ë‚´ì˜¨ ë©”ì‹œì§€ : " + msg);
 //				bw.write(msg);
 			}
-			System.out.println("¼­¹ö ÇÁ·Î±×·¥À» Á¾·áÇÕ´Ï´Ù.");
+			System.out.println("ì„œë²„ í”„ë¡œê·¸ë¨ì„ ì¢…ë£Œí•©ë‹ˆë‹¤.");
 			server.close();
 		} catch (IOException e) {
 			e.printStackTrace();

@@ -1,4 +1,4 @@
-package µ¿±Ô_12;
+package ë™ê·œ_12;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
@@ -21,21 +21,21 @@ public class EchoClient {
 			
 			byte[] buffer = new byte[2048];
 			while(true){
-				System.out.print("¸Ş¼¼Áö¸¦ ÀÔ·ÂÇÏ¼¼¿ä : ");
+				System.out.print("ë©”ì„¸ì§€ë¥¼ ì…ë ¥í•˜ì„¸ìš” : ");
 				String msg = sc.nextLine();
 				bos.write(msg.getBytes());
 				bos.flush();
 				int count = bis.read(buffer);
 				if(count == -1) break;
-				System.out.println("¼­¹ö¿¡¼­ Àç Àü¼ÛÇÑ ¸Ş½ÃÁö :" + new String(buffer, 0, count));
-//				System.out.print("¸Ş¼¼Áö¸¦ ÀÔ·ÂÇÏ¼¼¿ä : ");
+				System.out.println("ì„œë²„ì—ì„œ ì¬ ì „ì†¡í•œ ë©”ì‹œì§€ :" + new String(buffer, 0, count));
+//				System.out.print("ë©”ì„¸ì§€ë¥¼ ì…ë ¥í•˜ì„¸ìš” : ");
 //				bw.write(sc.nextLine());
-//				System.out.println("¼­¹ö·Î ¸Ş½ÃÁö¸¦ º¸³Â½À´Ï´Ù.");
+//				System.out.println("ì„œë²„ë¡œ ë©”ì‹œì§€ë¥¼ ë³´ëƒˆìŠµë‹ˆë‹¤.");
 //				String msg = br.readLine();
 //				if(msg == null) break;
-//				System.out.println("¼­¹ö¿¡¼­ Àç Àü¼ÛÇÑ ¸Ş½ÃÁö :" + msg);
+//				System.out.println("ì„œë²„ì—ì„œ ì¬ ì „ì†¡í•œ ë©”ì‹œì§€ :" + msg);
 			}
-			System.out.println("Å¬¶óÀÌ¾ğÆ®¸¦ Á¾·áÇÕ´Ï´Ù.");
+			System.out.println("í´ë¼ì´ì–¸íŠ¸ë¥¼ ì¢…ë£Œí•©ë‹ˆë‹¤.");
 			
 		} catch (IOException e) {
 			e.printStackTrace();

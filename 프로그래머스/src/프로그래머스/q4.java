@@ -1,4 +1,4 @@
-package ÇÁ·Î±×·¡¸Ó½º;
+package í”„ë¡œê·¸ëž˜ë¨¸ìŠ¤;
 
 public class q4 {
 	public static void main(String[] args) {

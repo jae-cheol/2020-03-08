@@ -25,7 +25,7 @@ public abstract class BaseUI implements IPokemonUI {
 				n = Integer.parseInt(sc.nextLine());
 				break;
 			}catch(NumberFormatException e){
-				System.out.println("¼ıÀÚ¸¸ ÀÔ·ÂÇØ ¤¸¤¾");
+				System.out.println("ìˆ«ìë§Œ ì…ë ¥í•´ ã…ˆã…");
 			}
 		}
 		return n;

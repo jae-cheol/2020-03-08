@@ -33,7 +33,7 @@ class ReciveThread extends Thread{
 				if(msg == null) break;
 				System.out.println(msg);
 			} catch (IOException e) {
-				System.out.println("¼­¹ö¿ÍÀÇ Á¢¼ÓÀÌ ²÷¾î Á³½À´Ï´Ù. ¿¬°áÀ» Á¾·á ÇÕ´Ï´Ù.");
+				System.out.println("ì„œë²„ì™€ì˜ ì ‘ì†ì´ ëŠì–´ ì¡ŒìŠµë‹ˆë‹¤. ì—°ê²°ì„ ì¢…ë£Œ í•©ë‹ˆë‹¤.");
 				break;
 			}
 		}
@@ -58,13 +58,13 @@ class SendThread extends Thread{
 	@Override
 	public void run(){
 		while(true){
-			System.out.print("µ¥ÀÌÅÍ ÀÔ·Â (±Ó¼Ó¸»Àº @ºÙÀÌ°í µ¥ÀÌÅÍ ÀÔ·Â ): ");
+			System.out.print("ë°ì´í„° ì…ë ¥ (ê·“ì†ë§ì€ @ë¶™ì´ê³  ë°ì´í„° ì…ë ¥ ): ");
 			StringBuilder sb = new StringBuilder(sc.nextLine());
 			if(sb.toString().equalsIgnoreCase("quit")) break;
-			if(sb.toString().length() > 0 && sb.toString().charAt(0) == '@'){ // ±Ó¼Ó¸»ÀÏ °æ¿ì..
+			if(sb.toString().length() > 0 && sb.toString().charAt(0) == '@'){ // ê·“ì†ë§ì¼ ê²½ìš°..
 				sb.deleteCharAt(0);
 				sb.append(Constants.secret);
-				pw.println("[" + userName +"](±Ó¼Ó¸») : " + sb.toString());
+				pw.println("[" + userName +"](ê·“ì†ë§) : " + sb.toString());
 			}
 			else pw.println("[" + userName +"] : " + sb.toString());
 			pw.flush();
@@ -87,7 +87,7 @@ public class Client {
 	}
 	public void connect() throws IOException{
 		socket = new Socket(ipAddress, portNumber);
-		System.out.println("[¼­¹ö(" + socket.getInetAddress().getHostAddress() + ")¿Í ¿¬°á µÇ¾ú½À´Ï´Ù]");
+		System.out.println("[ì„œë²„(" + socket.getInetAddress().getHostAddress() + ")ì™€ ì—°ê²° ë˜ì—ˆìŠµë‹ˆë‹¤]");
 		new SendThread(socket.getOutputStream(), userID).start();
 		new ReciveThread(socket.getInputStream()).start();
 	}

@@ -22,19 +22,19 @@ public class MemberUI extends BaseUI {
 			if (ui != null)
 				ui.execute();
 			else
-				System.out.println("Ç×¸ñÀ» Àß¸ø¼±ÅÃÇÏ¼Ì½À´Ï´Ù.");
+				System.out.println("í•­ëª©ì„ ì˜ëª»ì„ íƒí•˜ì…¨ìŠµë‹ˆë‹¤.");
 		}
 	}
 
 	private int menu() {
 		System.out.println("------------------------------------------");
-		System.out.println("\tÃ¤ÆÃ ÇÁ·Î±×·¥");
+		System.out.println("\tì±„íŒ… í”„ë¡œê·¸ë¨");
 		System.out.println("------------------------------------------");
-		System.out.println("1. È¸¿ø°¡ÀÔ");
-		System.out.println("2. ·Î±×ÀÎ");
-		System.out.println("0. Á¾·á");
+		System.out.println("1. íšŒì›ê°€ì…");
+		System.out.println("2. ë¡œê·¸ì¸");
+		System.out.println("0. ì¢…ë£Œ");
 		System.out.println("------------------------------------------");
-		int type = scanInt("¸Ş´ºÁß ¿øÇÏ´Â Ç×¸ñÀ» ¼±ÅÃÇÏ¼¼¿ä : ");
+		int type = scanInt("ë©”ë‰´ì¤‘ ì›í•˜ëŠ” í•­ëª©ì„ ì„ íƒí•˜ì„¸ìš” : ");
 
 		return type;
 	}

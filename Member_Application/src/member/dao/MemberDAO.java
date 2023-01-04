@@ -10,7 +10,7 @@ import kr.co.bit.util.ConnectionFactory;
 import kr.co.bit.util.JDBCClose;
 
 /*
- * DB¿¡ °Ô½Ã¹°°ü¸®
+ * DBì— ê²Œì‹œë¬¼ê´€ë¦¬
  */
 public class MemberDAO {
 
@@ -18,8 +18,8 @@ public class MemberDAO {
 	private PreparedStatement pstmt = null;
 
 	/**
-	 * È¸¿ø µî·ÏÇÏ´Â ¸Ş¼Òµå
-	 * @param È¸¿øVO
+	 * íšŒì› ë“±ë¡í•˜ëŠ” ë©”ì†Œë“œ
+	 * @param íšŒì›VO
 	 */
 	public void insertBoard(MemberVO member)  {
 	
@@ -28,7 +28,7 @@ public class MemberDAO {
 			
 			/*
 			 * insert into t_client(id, pw, name, nick, reg_date)
-				values('jcdoom', '0000', '±èÀçÃ¶', 'ÀçÃ¶', sysdate);
+				values('jcdoom', '0000', 'ê¹€ì¬ì² ', 'ì¬ì² ', sysdate);
 			 */
 			StringBuilder sql = new StringBuilder();
 			sql.append("insert into t_client(id, pw, name, nick) ");
@@ -50,7 +50,7 @@ public class MemberDAO {
 	}
 	
 	/**
-	 * ÀüÃ¼È¸¿øÀ» Á¶È¸ÇÏ´Â ¸Ş¼Òµå
+	 * ì „ì²´íšŒì›ì„ ì¡°íšŒí•˜ëŠ” ë©”ì†Œë“œ
 	 */
 	public List<MemberVO> selectBoard() throws Exception {
 		

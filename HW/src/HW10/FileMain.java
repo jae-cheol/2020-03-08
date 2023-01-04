@@ -35,15 +35,15 @@ class InputManager{
 	public static File fileInputManager(){
 		File file;
 		while(true){
-			System.out.print("ÃÊ±â Æú´õ °æ·Î ÀÔ·Â : ");
+			System.out.print("ì´ˆê¸° í´ë” ê²½ë¡œ ì…ë ¥ : ");
 			String initPath = Util.sc.nextLine();
 			file = new File(initPath);
 			if(!file.exists()){
-				System.out.println("Æú´õ°¡ Á¸ÀçÇÏÁö ¾Ê½À´Ï´Ù.");
+				System.out.println("í´ë”ê°€ ì¡´ì¬í•˜ì§€ ì•ŠìŠµë‹ˆë‹¤.");
 				continue;
 			}
 			if(!file.isDirectory()){ 
-				System.out.println("µğ·ºÅÍ¸® ÆÄÀÏÀÌ ¾Æ´Õ´Ï´Ù.");
+				System.out.println("ë””ë ‰í„°ë¦¬ íŒŒì¼ì´ ì•„ë‹™ë‹ˆë‹¤.");
 				continue;
 			}
 			break;
@@ -65,7 +65,7 @@ class FileManager{
 	public void printFileInfo(){
 		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd hh:mm\t");
 		System.out.println("=================================================");
-		System.out.println("|\t¸¶Áö¸·¼öÁ¤³¯Â¥\tÇü½Ä\tÅ©±â\tÀÌ¸§\t|");
+		System.out.println("|\të§ˆì§€ë§‰ìˆ˜ì •ë‚ ì§œ\tí˜•ì‹\tí¬ê¸°\tì´ë¦„\t|");
 		System.out.println("=================================================");
 		File[] files = file.listFiles();
 		try{
@@ -79,37 +79,37 @@ class FileManager{
 		}catch(NullPointerException e) {}
 	}
 	public void mkdir(){
-		String dirName = InputManager.IinputString("»ı¼º ÇÒ µğ·ºÅä¸® ÀÌ¸§ ÀÔ·Â : ");
+		String dirName = InputManager.IinputString("ìƒì„± í•  ë””ë ‰í† ë¦¬ ì´ë¦„ ì…ë ¥ : ");
 		File file = new File(this.file.getAbsolutePath() + dirName);
-		if(file.mkdir()) System.out.println(dirName + "µğ·ºÅÍ¸® »ı¼º ¿Ï·á");
-		else System.out.println(dirName + "µğ·ºÅÍ¸® »ı¼º ½ÇÆĞ(ÀÌ¹Ì Á¸ÀçÇÏ´ÂÁö È®ÀÎ ÇÏ¼¼¿ä)");
+		if(file.mkdir()) System.out.println(dirName + "ë””ë ‰í„°ë¦¬ ìƒì„± ì™„ë£Œ");
+		else System.out.println(dirName + "ë””ë ‰í„°ë¦¬ ìƒì„± ì‹¤íŒ¨(ì´ë¯¸ ì¡´ì¬í•˜ëŠ”ì§€ í™•ì¸ í•˜ì„¸ìš”)");
 	}
 	
 	public void fileReName(){
-		String dirName = InputManager.IinputString("´ë»ó ÆÄÀÏ ÀÔ·Â : ");
+		String dirName = InputManager.IinputString("ëŒ€ìƒ íŒŒì¼ ì…ë ¥ : ");
 		File file = new File(this.file.getAbsolutePath() + dirName);
 		if(!file.exists()){
-			System.out.println("Á¸ÀçÇÏÁö ¾Ê´Â ÆÄÀÏÀÔ´Ï´Ù.");
+			System.out.println("ì¡´ì¬í•˜ì§€ ì•ŠëŠ” íŒŒì¼ì…ë‹ˆë‹¤.");
 			return;
 		}
-		String newName = InputManager.IinputString("º¯°æ ÇÒ ÆÄÀÏ¸í ÀÔ·Â : ");
-		if(file.renameTo(new File(this.file.getAbsolutePath() + newName))) System.out.println("ÆÄÀÏ¸í º¯°æ ¼º°ø");
-		else System.out.println("ÆÄÀÏ¸í º¯°æ ½ÇÆĞ");
+		String newName = InputManager.IinputString("ë³€ê²½ í•  íŒŒì¼ëª… ì…ë ¥ : ");
+		if(file.renameTo(new File(this.file.getAbsolutePath() + newName))) System.out.println("íŒŒì¼ëª… ë³€ê²½ ì„±ê³µ");
+		else System.out.println("íŒŒì¼ëª… ë³€ê²½ ì‹¤íŒ¨");
 	}
 	public void deleteFile(){
-		String fileName = InputManager.IinputString("»èÁ¦ ÇÒ ÆÄÀÏ ÀÔ·Â : ");
+		String fileName = InputManager.IinputString("ì‚­ì œ í•  íŒŒì¼ ì…ë ¥ : ");
 		File file = new File(this.file.getAbsolutePath()+fileName);
 		if(!file.exists()){
-			System.out.println("Á¸ÀçÇÏÁö ¾Ê´Â ÆÄÀÏÀÔ´Ï´Ù.");
+			System.out.println("ì¡´ì¬í•˜ì§€ ì•ŠëŠ” íŒŒì¼ì…ë‹ˆë‹¤.");
 			return;
 		}
-		if(file.delete()) System.out.println(fileName + " ÆÄÀÏ »èÁ¦ ¼º°ø");
-		else System.out.println("ÆÄÀÏ »èÁ¦ ½ÇÆĞ");
+		if(file.delete()) System.out.println(fileName + " íŒŒì¼ ì‚­ì œ ì„±ê³µ");
+		else System.out.println("íŒŒì¼ ì‚­ì œ ì‹¤íŒ¨");
 	}
 	
 	public void toParent(){
 		if(this.file.getParentFile() == null){
-			System.out.println("ÇöÀç Æú´õ´Â ÃÖ»óÀ§ Æú´õ ÀÔ´Ï´Ù.");
+			System.out.println("í˜„ì¬ í´ë”ëŠ” ìµœìƒìœ„ í´ë” ì…ë‹ˆë‹¤.");
 			return;
 		}
 		this.file = this.file.getParentFile();
@@ -119,13 +119,13 @@ class FileManager{
 	public void printCurrentDir(){ this.printFileInfo();}
 	
 	public void toChild(){
-		String fileName = InputManager.IinputString("ÀÌµ¿ ÇÒ ÇÏÀ§ ÆÄÀÏ ÀÔ·Â : ");
+		String fileName = InputManager.IinputString("ì´ë™ í•  í•˜ìœ„ íŒŒì¼ ì…ë ¥ : ");
 		File file = new File(this.file.getAbsolutePath()+fileName);
 		if(!file.exists()){
-			System.out.println("Á¸ÀçÇÏÁö ¾Ê´Â ÆÄÀÏÀÔ´Ï´Ù.");
+			System.out.println("ì¡´ì¬í•˜ì§€ ì•ŠëŠ” íŒŒì¼ì…ë‹ˆë‹¤.");
 			return;
 		}
-		if(!file.isDirectory()) System.out.println(fileName + " ÆÄÀÏÀº µğ·ºÅÍ¸® ÆÄÀÏÀÌ ¾Æ´Õ´Ï´Ù.");
+		if(!file.isDirectory()) System.out.println(fileName + " íŒŒì¼ì€ ë””ë ‰í„°ë¦¬ íŒŒì¼ì´ ì•„ë‹™ë‹ˆë‹¤.");
 		this.file = file;
 		this.printFileInfo();
 	}
@@ -137,7 +137,7 @@ public class FileMain {
 		FileManager fm = new FileManager(file);
 		fm.printFileInfo();
 		while(true){
-			switch(InputManager.userInputManager("1.»õ Æú´õ »ı¼º 2.ÀÌ¸§º¯°æ 3.»èÁ¦ 4.»óÀ§ Æú´õ ÀÌµ¿ 5.ÇÏÀ§Æú´õÀÌµ¿ 6.ÇöÀçµğ·ºÅÍ¸®Ãâ·Â 7.Á¾·á\n >> ", 1, 7)){
+			switch(InputManager.userInputManager("1.ìƒˆ í´ë” ìƒì„± 2.ì´ë¦„ë³€ê²½ 3.ì‚­ì œ 4.ìƒìœ„ í´ë” ì´ë™ 5.í•˜ìœ„í´ë”ì´ë™ 6.í˜„ì¬ë””ë ‰í„°ë¦¬ì¶œë ¥ 7.ì¢…ë£Œ\n >> ", 1, 7)){
 			case Constants.MAKENEWDIR :
 				fm.mkdir();
 				break;
@@ -157,7 +157,7 @@ public class FileMain {
 				fm.printCurrentDir();
 				break;
 			case Constants.EXIT :
-				System.out.println("ÇÁ·Î±×·¥À» Á¾·áÇÕ´Ï´Ù. °¨»çÈü´Ï´Ù.");
+				System.out.println("í”„ë¡œê·¸ë¨ì„ ì¢…ë£Œí•©ë‹ˆë‹¤. ê°ì‚¬í™ë‹ˆë‹¤.");
 				System.exit(0);
 				break;
 			}

@@ -11,10 +11,10 @@ class NameThread extends Thread {
 	@Override
 	public void run() {
 		// NameThread-0  -->  changeNameThread-0
-		System.out.println("½º·¹µå ÀÌ¸§ : " + getName());
+		System.out.println("ìŠ¤ë ˆë“œ ì´ë¦„ : " + getName());
 		String no = getName().substring(getName().lastIndexOf("-"));
 		setName("changeThread" + no);
-		System.out.println("º¯°æµÈ ½º·¹µå ÀÌ¸§ : " + getName());
+		System.out.println("ë³€ê²½ëœ ìŠ¤ë ˆë“œ ì´ë¦„ : " + getName());
 	}
 }
 
@@ -27,7 +27,7 @@ public class NameThreadM {
 		System.out.println("nt : " + nt.getName());
 		System.out.println("nt2 : " + nt2.getName());
 
-		// Thread¸¦ »ó¼Ó¹ŞÀº °÷¿¡¼­ run()¿¡ nt , nt2°¡ °æÀïÀ¸·Î µé¾î°¨.
+		// Threadë¥¼ ìƒì†ë°›ì€ ê³³ì—ì„œ run()ì— nt , nt2ê°€ ê²½ìŸìœ¼ë¡œ ë“¤ì–´ê°.
 		nt.start();
 		nt2.start();
 	}

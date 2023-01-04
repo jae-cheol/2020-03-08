@@ -3,7 +3,7 @@ package kr.co.bit.board.ui;
 public class UpdateUI extends BaseUI {
 
     public void execute() throws Exception {
-    	System.out.println("°Ô½Ã±Û ¼öÁ¤ È­¸é...");
+    	System.out.println("ê²Œì‹œê¸€ ìˆ˜ì • í™”ë©´...");
     }
 
 }

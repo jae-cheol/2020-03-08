@@ -7,7 +7,7 @@ public class SearchOneUI extends BaseUI {
 	@Override
 	public void execute() throws Exception {
 
-		int no = scanInt("Á¶È¸ÇÒ ±Û¹øÈ£¸¦ ÀÔ·ÂÇÏ¼¼¿ä : ");
+		int no = scanInt("ì¡°íšŒí•  ê¸€ë²ˆí˜¸ë¥¼ ì…ë ¥í•˜ì„¸ìš” : ");
 		
 		BoardVO board = new BoardVO();
 		board.setNo(no);
@@ -15,13 +15,13 @@ public class SearchOneUI extends BaseUI {
 		
 		System.out.println("-----------------------------------------------");
 		if(board == null) {
-			System.out.println("±Û¹øÈ£ [" + no + "] °Ô½Ã±ÛÀº Á¸ÀçÇÏÁö ¾Ê½À´Ï´Ù.");
+			System.out.println("ê¸€ë²ˆí˜¸ [" + no + "] ê²Œì‹œê¸€ì€ ì¡´ì¬í•˜ì§€ ì•ŠìŠµë‹ˆë‹¤.");
 			return;
 		}
-		System.out.println("\t¹ø   È£ : " + board.getNo());
-		System.out.println("\tÁ¦   ¸ñ : " + board.getTitle());
-		System.out.println("\t±Û¾´ÀÌ : " + board.getWriter());
-		System.out.println("\tµî·ÏÀÏ : " + board.getRegDate());
+		System.out.println("\të²ˆ   í˜¸ : " + board.getNo());
+		System.out.println("\tì œ   ëª© : " + board.getTitle());
+		System.out.println("\tê¸€ì“´ì´ : " + board.getWriter());
+		System.out.println("\të“±ë¡ì¼ : " + board.getRegDate());
 		System.out.println("-----------------------------------------------");
 		
 		

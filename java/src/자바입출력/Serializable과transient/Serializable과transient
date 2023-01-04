@@ -1,0 +1,36 @@
+Serializable 과 transient
+
+(1) Serializable
+
+데이터를 파일에 쓰거나, 네트워크를 타고 다른 곳에 전송할 때는 데이터를 바이트 단위로 분해하여 
+순차적으로 보내야 한다. 이것을 직렬화(Serialization)라고 한다.
+
+기본 자료형(boolean, char, byte, short, int ,long, float, double)은 
+정해진 바이트의 변수이기 때문에 바이트 단위로 분해하여 전송한 후 다시 조립하는데 문제가 없다.
+
+하지만 객체의 크기는 가변적이며, 객체를 구성하는 자료형들의 종류와 수에 따라 객체의 크기는 다양하게 
+바뀔 수 있다. 이런 객체를 직렬화 하기 위해서 Serializable 인터페이스를 구현하게 된다.
+
+[JAVA] 객체 직렬화 ObjectInputStream / ObjectOutputStream
+
+* 직렬화가 가능한 객체의 조건
+
+① 기본형 타입(boolean, char, byte, short, int, long, float, double)은 
+직렬화가 가능
+② Serializable 인터페이스를 구현한 객체여야 한다. 
+(Vector 클래스는 Serializable 인터페이스구현)
+③ 해당 객체의 멤버들 중에 Serializable 인터페이스가 구현되지 않은게 존재하면 안된다.
+④ transient 가 사용된 멤버는 전송되지 않는다. (보안 변수 : null 전송)
+
+객체 직렬화는 객체에 implements Serializable 만 선언해 주면 된다.
+
+(2) transient
+
+하지만, 객체의 데이터 중 일부의 데이터는(패스워드와 같은 보안) 여러가지 이유로 전송을 
+하고 싶지 않을 수 있다. 이러한 변수는 직렬화에서 제외해야 되며, 
+이를 위해서 변수에 transient를 선언한다.
+
+또한, 직렬화 조건 중 객체의 멤버들 중에 Serializable 인터페이스 구현되지 않은 객체가 있으면, 
+직렬화 할 수 없다.(NonSerializableException) 직렬화 해야 되는 객체 안의 객체 중 
+Serializable 인터페이스가 구현되지 않으면서 전송하지 않아도 되는 객체 앞에는 transient 를 
+선언해준다. 그러면 직렬화 대상에서 제외되므로 해당 객체는 직렬화가 가능해진다.

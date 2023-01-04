@@ -6,7 +6,7 @@ public class ExitUI extends BaseUI {
 	public void execute() throws Exception {
 
 		System.out.println();
-		System.out.println("\t°Ô½ÃÆÇ ÇÁ·Î±×·¥À» Á¾·áÇÕ´Ï´Ù.");
+		System.out.println("\tê²Œì‹œíŒ í”„ë¡œê·¸ë¨ì„ ì¢…ë£Œí•©ë‹ˆë‹¤.");
 		System.exit(0);
 	}
 }

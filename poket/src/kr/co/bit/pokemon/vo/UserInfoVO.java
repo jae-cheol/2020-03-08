@@ -36,14 +36,14 @@ public class UserInfoVO extends PlayVO {
 
 	@Override
 	public String toString() {
-		return "ÇÃ·¹ÀÌ¾î Á¤º¸ [ÀÌ¸§ =" + id + ", °ø°İ·Â =" + offensive + ", ¹æ¾î·Â =" + defensive + ", Ã¼·Â =" + life + ", ÇöÀç ÀÚ±İ=" + money
+		return "í”Œë ˆì´ì–´ ì •ë³´ [ì´ë¦„ =" + id + ", ê³µê²©ë ¥ =" + offensive + ", ë°©ì–´ë ¥ =" + defensive + ", ì²´ë ¥ =" + life + ", í˜„ì¬ ìê¸ˆ=" + money
 				+ "]";
 	}
 	
 	@Override
 	public void PrintHp(String mon_name)
 	{
-		System.out.println(mon_name + "ÀÇ °ø°İÀ» ¹ŞÀ½. " + "³» Ã¼·Â : " + this.life);
+		System.out.println(mon_name + "ì˜ ê³µê²©ì„ ë°›ìŒ. " + "ë‚´ ì²´ë ¥ : " + this.life);
 	}
 	
 	public void setStat(String id, int power, int defen, int hp, int money)

@@ -8,9 +8,9 @@ public class FileSearch {
 		File dirObj = new File("iotest");
 		if(dirObj.exists())
 			System.out.println("-------------------------------------");
-			System.out.println("\t" + dirObj.getName() + "Á¤º¸");
+			System.out.println("\t" + dirObj.getName() + "ì •ë³´");
 			System.out.println("-------------------------------------");
-			System.out.println("ÀÌ¸§\t\tÁ¾·ù\tÅ©±â\t¸¶Áö¸·¼öÁ¤³¯Â¥");
+			System.out.println("ì´ë¦„\t\tì¢…ë¥˜\tí¬ê¸°\të§ˆì§€ë§‰ìˆ˜ì •ë‚ ì§œ");
 			System.out.println("-------------------------------------");
 			
 	}

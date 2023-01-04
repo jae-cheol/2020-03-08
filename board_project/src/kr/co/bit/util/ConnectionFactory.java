@@ -5,7 +5,7 @@ import java.sql.DriverManager;
 import java.sql.Statement;
 
 /*
- * Factory - ¿øÇÏ´Â °´Ã¼¸¦ ÇÏ³ª¾¿ ¸¸µé¾îÁÖ´Â °³³ä.
+ * Factory - ì›í•˜ëŠ” ê°ì²´ë¥¼ í•˜ë‚˜ì”© ë§Œë“¤ì–´ì£¼ëŠ” ê°œë….
  */
 public class ConnectionFactory {
 
@@ -13,14 +13,14 @@ public class ConnectionFactory {
 
 		Connection conn = null;
 		try {
-			// 1´Ü°è : µå¶óÀÌ¹ö ·Îµù - µ¿ÀûÀ¸·Î Å¬·¡½º ÀÎ½ÄÇÏ°Ô ÇÔ.
-			Class.forName("oracle.jdbc.driver.OracleDriver"); // Ã¼Å©µå ÀÍ¼Á¼Ç
-			System.out.println("µå¶óÀÌ¹ö ·Îµù ¼º°ø...");
+			// 1ë‹¨ê³„ : ë“œë¼ì´ë²„ ë¡œë”© - ë™ì ìœ¼ë¡œ í´ë˜ìŠ¤ ì¸ì‹í•˜ê²Œ í•¨.
+			Class.forName("oracle.jdbc.driver.OracleDriver"); // ì²´í¬ë“œ ìµì…‰ì…˜
+			System.out.println("ë“œë¼ì´ë²„ ë¡œë”© ì„±ê³µ...");
 
-			// 2´Ü°è : µå¶óÀÌ¹ö ¼±ÅÃ, DBÁ¢¼Ó ÈÄ ¿¬°á°´Ã¼ ¾ò±â - Á¢¼ÓÇÏ±â À§ÇÑ ip,portµîµî.. ¾Ë¾Æ¾ßµÊ.
+			// 2ë‹¨ê³„ : ë“œë¼ì´ë²„ ì„ íƒ, DBì ‘ì† í›„ ì—°ê²°ê°ì²´ ì–»ê¸° - ì ‘ì†í•˜ê¸° ìœ„í•œ ip,portë“±ë“±.. ì•Œì•„ì•¼ë¨.
 			String url = "jdbc:oracle:thin:@localhost:1521:xe";
-			// JDBC_URL ±¸¼º = jdbc:oracle:thin:@IPÁÖ¼Ò:Æ÷Æ®:SID
-							// µ¿ÀÏÇÑ °ª.--------// SID = XE°ª °°Àº°Å.
+			// JDBC_URL êµ¬ì„± = jdbc:oracle:thin:@IPì£¼ì†Œ:í¬íŠ¸:SID
+							// ë™ì¼í•œ ê°’.--------// SID = XEê°’ ê°™ì€ê±°.
 			String user = "hr";
 			String password = "hr";
 			

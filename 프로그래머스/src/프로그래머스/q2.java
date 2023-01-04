@@ -1,4 +1,4 @@
-package ÇÁ·Î±×·¡¸Ó½º;
+package í”„ë¡œê·¸ëž˜ë¨¸ìŠ¤;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -9,8 +9,8 @@ public class q2 {
 		
 		for(int i=0; i<arr.length; i++) {
 			for(int j=0; j<i; j++) {
-				if(arr[i] == arr[j]) {	// Áßº¹ÀÖ´ÂÁö ÇÏ³ªÇÏ³ª ºñ±³
-					System.out.println("Áßº¹°ªÀÖÀ½");
+				if(arr[i] == arr[j]) {	// ì¤‘ë³µìžˆëŠ”ì§€ í•˜ë‚˜í•˜ë‚˜ ë¹„êµ
+					System.out.println("ì¤‘ë³µê°’ìžˆìŒ");
 //					return false;
 				}
 				if(arr.length < arr[j]) {

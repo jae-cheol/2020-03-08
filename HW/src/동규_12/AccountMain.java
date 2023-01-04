@@ -1,4 +1,4 @@
-package µ¿±Ô_12;
+package ë™ê·œ_12;
 
 class Account {
 	private String name;
@@ -15,16 +15,16 @@ class Account {
 	}
 	public synchronized void deposit(int money){
 		this.money += money;
-		System.out.println("ÇöÀç ÀÜ¾×Àº " + this.money + "¿ø ÀÔ´Ï´Ù.");
+		System.out.println("í˜„ì¬ ì”ì•¡ì€ " + this.money + "ì› ì…ë‹ˆë‹¤.");
 	}
 	public synchronized void withdraw(int money){
 		if(this.money - money < 0){
-			System.out.println("Ãâ±İ ±İ¾× : " + money + "==> ÀÜ¾×ÀÌ ºÎÁ·ÇÏ¿© Ãâ±İÀ» ÇÒ ¼ö ¾ø½À´Ï´Ù.");
-			System.out.println("ÇöÀç ÀÜ¾× : " + this.money);
+			System.out.println("ì¶œê¸ˆ ê¸ˆì•¡ : " + money + "==> ì”ì•¡ì´ ë¶€ì¡±í•˜ì—¬ ì¶œê¸ˆì„ í•  ìˆ˜ ì—†ìŠµë‹ˆë‹¤.");
+			System.out.println("í˜„ì¬ ì”ì•¡ : " + this.money);
 			return;
 		}
 		this.money -= money;
-		System.out.println("ÇöÀç ÀÜ¾×Àº " + this.money + "¿ø ÀÔ´Ï´Ù.");
+		System.out.println("í˜„ì¬ ì”ì•¡ì€ " + this.money + "ì› ì…ë‹ˆë‹¤.");
 	}
 }
 
@@ -45,11 +45,11 @@ class User extends Thread{
 			int flag = Util.ran.nextInt(2);
 			switch(flag){
 			case Constants.DEPOSIT :
-				System.out.println(name + "°í°´´ÔÀÌ " + money + " ¿øÀ» ÀÔ±İ ÇÏ¼Ì½À´Ï´Ù.");
+				System.out.println(name + "ê³ ê°ë‹˜ì´ " + money + " ì›ì„ ì…ê¸ˆ í•˜ì…¨ìŠµë‹ˆë‹¤.");
 				account.deposit(money);
 				break;
 			case Constants.WITHDRAW :
-				System.out.println(name + "°í°´´ÔÀÌ " + money + " Ãâ±İ ÇÏ¼Ì½À´Ï´Ù.");
+				System.out.println(name + "ê³ ê°ë‹˜ì´ " + money + " ì¶œê¸ˆ í•˜ì…¨ìŠµë‹ˆë‹¤.");
 				account.withdraw(money);
 			break;
 			}
@@ -59,9 +59,9 @@ class User extends Thread{
 
 public class AccountMain {
 	public static void main(String[] args) {
-		  Account ac = new Account("È«±æµ¿", 10000);
-		  new User("È«±æµ¿", ac).start();
-		  new User("¾î¸Ó´Ï", ac).start();
-		  new User("¾Æ¹öÁö", ac).start();
+		  Account ac = new Account("í™ê¸¸ë™", 10000);
+		  new User("í™ê¸¸ë™", ac).start();
+		  new User("ì–´ë¨¸ë‹ˆ", ac).start();
+		  new User("ì•„ë²„ì§€", ac).start();
 	}
 }

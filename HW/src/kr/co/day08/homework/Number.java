@@ -18,14 +18,14 @@ public class Number implements Game {
 			sc.nextLine();
 			if (me < you) {
 				max = you-1;
-				System.out.println(you + "º¸´Ù ÀÛÀº ¼ö ÀÔ´Ï´Ù."+me);
-				System.out.println("±âÈ¸´Â " + cnt-- + "¹ø ³²¾Ò½À´Ï´Ù.");
-				System.out.println(min + " ~ " + max + " »çÀÌÀÇ ¼ö¸¦ ÀÔ·ÂÇÏ½Ã¿À.");
+				System.out.println(you + "ë³´ë‹¤ ì‘ì€ ìˆ˜ ì…ë‹ˆë‹¤."+me);
+				System.out.println("ê¸°íšŒëŠ” " + cnt-- + "ë²ˆ ë‚¨ì•˜ìŠµë‹ˆë‹¤.");
+				System.out.println(min + " ~ " + max + " ì‚¬ì´ì˜ ìˆ˜ë¥¼ ì…ë ¥í•˜ì‹œì˜¤.");
 			} else if (me > you) {
 				min = you+1;
-				System.out.println(you + "º¸´Ù Å« ¼ö ÀÔ´Ï´Ù.");
-				System.out.println("±âÈ¸´Â " + cnt-- + "¹ø ³²¾Ò½À´Ï´Ù."+me);
-				System.out.println(min + " ~ " + max + " »çÀÌÀÇ ¼ö¸¦ ÀÔ·ÂÇÏ½Ã¿À.");
+				System.out.println(you + "ë³´ë‹¤ í° ìˆ˜ ì…ë‹ˆë‹¤.");
+				System.out.println("ê¸°íšŒëŠ” " + cnt-- + "ë²ˆ ë‚¨ì•˜ìŠµë‹ˆë‹¤."+me);
+				System.out.println(min + " ~ " + max + " ì‚¬ì´ì˜ ìˆ˜ë¥¼ ì…ë ¥í•˜ì‹œì˜¤.");
 			} else {
 				System.out.println("You win");
 				return 1;
@@ -39,7 +39,7 @@ public class Number implements Game {
 			if (cnt == 0)
 				break;
 		}
-		System.out.println("Á³½À´Ï´Ù. ¼ıÀÚ´Â " + me + "ÀÔ´Ï´Ù.");
+		System.out.println("ì¡ŒìŠµë‹ˆë‹¤. ìˆ«ìëŠ” " + me + "ì…ë‹ˆë‹¤.");
 		return 0;
 	}
 }

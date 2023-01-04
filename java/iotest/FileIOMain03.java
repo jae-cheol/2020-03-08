@@ -5,7 +5,7 @@ import java.io.FileWriter;
 
 import kr.co.bit.util.FileClose;
 
-// FileIOMain03.java ---> FileIOMain03.java.txt º¹»ç
+// FileIOMain03.java ---> FileIOMain03.java.txt ë³µì‚¬
 
 public class FileIOMain05 {
 	public static void main(String[] args) {
@@ -24,7 +24,7 @@ public class FileIOMain05 {
 				fw.flush();
 			}
 			
-			System.out.println("ÆÄÀÏ º¹»ç¸¦ ¿Ï·áÇÏ¿´½À´Ï´Ù.");
+			System.out.println("íŒŒì¼ ë³µì‚¬ë¥¼ ì™„ë£Œí•˜ì˜€ìŠµë‹ˆë‹¤.");
 		} catch(Exception e) {
 			e.printStackTrace();
 		} finally {

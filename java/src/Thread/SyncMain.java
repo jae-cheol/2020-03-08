@@ -2,7 +2,7 @@ package Thread;
 
 class Sync {
 	public void a() {
-		synchronized(this) {	// ³» °´Ã¼¿¡ ´ëÇÑ µ¿±âÈ­¸¦ °É¾îÁÜ.
+		synchronized(this) {	// ë‚´ ê°ì²´ì— ëŒ€í•œ ë™ê¸°í™”ë¥¼ ê±¸ì–´ì¤Œ.
 			for(int i = 0; i < 10; i++)	
 				System.out.print('a');
 		}

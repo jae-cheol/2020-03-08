@@ -6,7 +6,7 @@ public class ServerMain {
 		try {
 			new Server(10002).start();
 		} catch (IOException e) {
-			System.out.println("¼­¹ö ±¸µ¿¿¡ ½ÇÆĞ Çß½À´Ï´Ù.");
+			System.out.println("ì„œë²„ êµ¬ë™ì— ì‹¤íŒ¨ í–ˆìŠµë‹ˆë‹¤.");
 		}
 	}
 }

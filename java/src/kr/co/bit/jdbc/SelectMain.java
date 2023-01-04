@@ -7,13 +7,13 @@ import java.sql.ResultSet;
 import kr.co.bit.util.ConnectionFactory;
 import kr.co.bit.util.JDBCClose;
 /*
- * (ÀÚ¹Ù)
- * 1. ÀÚ¹Ù¿¡¼­ DB·ÎÀÇ Á¢¼Ó Åë·Î¸¦ ¿­°í
- * 2. ±× Åë·Î¸¦ ÅëÇØ ¸í·ÉÀ» º¸³»¸é
+ * (ìë°”)
+ * 1. ìë°”ì—ì„œ DBë¡œì˜ ì ‘ì† í†µë¡œë¥¼ ì—´ê³ 
+ * 2. ê·¸ í†µë¡œë¥¼ í†µí•´ ëª…ë ¹ì„ ë³´ë‚´ë©´
  * 
- * (µğºñ)
- * 3. DB¿¡¼­ ¸í·ÉÀ» Ã³¸®ÇÏ°í
- * 4. ±× Ã³¸®ÇÑ °ªÀ» µ¹·Áº¸³¿.
+ * (ë””ë¹„)
+ * 3. DBì—ì„œ ëª…ë ¹ì„ ì²˜ë¦¬í•˜ê³ 
+ * 4. ê·¸ ì²˜ë¦¬í•œ ê°’ì„ ëŒë ¤ë³´ëƒ„.
  */
 public class SelectMain {
 	public static void main(String[] args) {
@@ -28,20 +28,20 @@ public class SelectMain {
 			String sql = "select * from t_test ";
 			pstmt = conn.prepareStatement(sql);
 
-			// executeQuery·Î ¸í·ÉÇÏ¸é ResultSetÀÌ¶ó´Â °´Ã¼¸¦ µ¹·ÁÁÜ.
+			// executeQueryë¡œ ëª…ë ¹í•˜ë©´ ResultSetì´ë¼ëŠ” ê°ì²´ë¥¼ ëŒë ¤ì¤Œ.
 			ResultSet rs = pstmt.executeQuery();
 
-			// rs´Â 1º¸´Ù ÀÌÀüÀÇ À§Ä¡¿¡ ÀÖÀ½.(true) rs.next()¸¦ ÇØ¾ß 1ÀÇ À§Ä¡·Î ÀÌµ¿(true)
-			// rs.next()°¡ ³¡À§Ä¡¿¡¼­ ±× ´ÙÀ½À¸·Î °¡¸é(false)
+			// rsëŠ” 1ë³´ë‹¤ ì´ì „ì˜ ìœ„ì¹˜ì— ìˆìŒ.(true) rs.next()ë¥¼ í•´ì•¼ 1ì˜ ìœ„ì¹˜ë¡œ ì´ë™(true)
+			// rs.next()ê°€ ëìœ„ì¹˜ì—ì„œ ê·¸ ë‹¤ìŒìœ¼ë¡œ ê°€ë©´(false)
 			while(rs.next()) {
 				String id = rs.getString("id");
 				String name = rs.getString("name");
 				System.out.println("id : " + id + ", name : " + name);
 			}
-//			rs.getInt("no"); // rs.getInt(1) 1¹øÂ° ÄÃ·³
-//			rs.getString("title"); // rs.getString(2) 2¹øÂ° ÄÃ·³
-			// ÄÃ·³ 1¹øÂ°,~~~~ n¹øÂ°
-			// rs¿¡¼­ no°¡ ÀÖ´Â°ªÀ» °¡¸£ÃÄÁà..
+//			rs.getInt("no"); // rs.getInt(1) 1ë²ˆì§¸ ì»¬ëŸ¼
+//			rs.getString("title"); // rs.getString(2) 2ë²ˆì§¸ ì»¬ëŸ¼
+			// ì»¬ëŸ¼ 1ë²ˆì§¸,~~~~ në²ˆì§¸
+			// rsì—ì„œ noê°€ ìˆëŠ”ê°’ì„ ê°€ë¥´ì³ì¤˜..
 		} catch (Exception e) { e.printStackTrace(); } 
 		finally { JDBCClose.close(conn, pstmt); }
 	}

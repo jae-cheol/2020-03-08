@@ -1,6 +1,6 @@
-package ½ºÆ®¸µ;
+package ìŠ¤íŠ¸ë§;
 
-public class ¼Ò¿ä½Ã°£_String_Buffer {
+public class ì†Œìš”ì‹œê°„_String_Buffer {
 
 	public static void main(String[] args) {
 		
@@ -10,7 +10,7 @@ public class ¼Ò¿ä½Ã°£_String_Buffer {
 			str = str + i;	
 		}
 		long end = System.currentTimeMillis();
-		System.out.println("¼Ò¿ä½Ã°£ : " + (end - start) / 1000.0 + "ÃÊ");
+		System.out.println("ì†Œìš”ì‹œê°„ : " + (end - start) / 1000.0 + "ì´ˆ");
 		
 		StringBuffer sb = new StringBuffer();
 		start = System.currentTimeMillis();
@@ -18,6 +18,6 @@ public class ¼Ò¿ä½Ã°£_String_Buffer {
 			sb.append(i);
 		}
 		end = System.currentTimeMillis();
-		System.out.println("¼Ò¿ä½Ã°£ : " + (end - start) / 1000.0 + "ÃÊ");
+		System.out.println("ì†Œìš”ì‹œê°„ : " + (end - start) / 1000.0 + "ì´ˆ");
 	}
 }

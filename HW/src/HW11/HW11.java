@@ -3,26 +3,26 @@ package HW11;
 import java.util.List;
 
 /*
- * {name: "È«±æµ¿", id : "hong", phone: "010-1111-2222"}
+ * {name: "í™ê¸¸ë™", id : "hong", phone: "010-1111-2222"}
  * 
- * // ½ÇÇà°á°ú
-ÀÌ¸§ : È«±æµ¿
+ * // ì‹¤í–‰ê²°ê³¼
+ì´ë¦„ : í™ê¸¸ë™
 id : hong
-ÀüÈ­¹øÈ£ : 010-1111-2222
+ì „í™”ë²ˆí˜¸ : 010-1111-2222
  */
 
 public class HW11 {
 
 	public static void main(String[] args) {
 		 Member m = Member.jsonParse("json.txt");
-		 System.out.println("ÀÌ¸§ : " + m.getName());
+		 System.out.println("ì´ë¦„ : " + m.getName());
 		 System.out.println("ID : " + m.getId());
 		 System.out.println("Phone : " + m.getPhone());
-//		jsonParse(); // v1.7 ÀÌÈÄ try() ±¸¹® -- finally ¾ø¾îÁø ±¸¹®.
+//		jsonParse(); // v1.7 ì´í›„ try() êµ¬ë¬¸ -- finally ì—†ì–´ì§„ êµ¬ë¬¸.
 		// writeObject();
 		 List<Member> list = (List<Member>) Member.jsonParseArray("json2.txt");
 	     for(Member m1 : list) {
-	    	 System.out.println("ÀÌ¸§ : " + m1.getName());
+	    	 System.out.println("ì´ë¦„ : " + m1.getName());
 			 System.out.println("ID : " + m1.getId());
 			 System.out.println("Phone : " + m1.getPhone());
 	     }

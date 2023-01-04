@@ -1,4 +1,4 @@
-package ¹è¿­;
+package ë°°ì—´;
 
 import java.util.Arrays;
 
@@ -9,7 +9,7 @@ public class Deep_Shallow {
 		int[] nums = {10, 20, 30, 40, 50};
 		int[] nums2;
 		
-		// Deep copy(±íÀºº¹»ç)
+		// Deep copy(ê¹Šì€ë³µì‚¬)
 		nums2 = new int[nums.length];
 //		for(int i = 0 ; i < nums.length; i++) {
 //			nums2[i] = nums[i];
@@ -22,7 +22,7 @@ public class Deep_Shallow {
 		}
 		
 		/*
-		// Shallow copy(¾èÀºº¹»ç)
+		// Shallow copy(ì–•ì€ë³µì‚¬)
 		nums2 = nums;
 		*/
 				

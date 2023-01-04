@@ -14,14 +14,14 @@ public class GameMain {
 		int wincnt = 0;
 		int losecnt = 0;
 		while (true) {
-			System.out.println("°ÔÀÓÀ» ¼±ÅÃÇÏ¼¼¿ä.");
-			System.out.println("A. °¡À§¹ÙÀ§º¸  B. ÁÖ»çÀ§ °ª ¸ÂÃß±â  C.¼ıÀÚ ¸ÂÃß±â  D. Á¾·á");
+			System.out.println("ê²Œì„ì„ ì„ íƒí•˜ì„¸ìš”.");
+			System.out.println("A. ê°€ìœ„ë°”ìœ„ë³´  B. ì£¼ì‚¬ìœ„ ê°’ ë§ì¶”ê¸°  C.ìˆ«ì ë§ì¶”ê¸°  D. ì¢…ë£Œ");
 			char ch = sc.nextLine().charAt(0);
 			switch (ch) {
 			case 'A':
-				System.out.println("°¡À§¹ÙÀ§º¸ °ÔÀÓÀÔ´Ï´Ù.");
-				System.out.println("°¡À§¹ÙÀ§º¸ Áß ÇÏ³ª¸¦ ÀÔ·ÂÇÏ¼¼¿ä.");
-				System.out.println("(1:°¡À§, 2:¹ÙÀ§, 3:º¸)");
+				System.out.println("ê°€ìœ„ë°”ìœ„ë³´ ê²Œì„ì…ë‹ˆë‹¤.");
+				System.out.println("ê°€ìœ„ë°”ìœ„ë³´ ì¤‘ í•˜ë‚˜ë¥¼ ì…ë ¥í•˜ì„¸ìš”.");
+				System.out.println("(1:ê°€ìœ„, 2:ë°”ìœ„, 3:ë³´)");
 				you = sc.nextInt();
 				sc.nextLine();
 				if(g1.startGame(you) == 1) {
@@ -31,8 +31,8 @@ public class GameMain {
 				}
 				break;
 			case 'B':
-				System.out.println("ÁÖ»çÀ§ °ª ¸ÂÃß±â °ÔÀÓÀÔ´Ï´Ù.");
-				System.out.println("ÁÖ»çÀ§ °ªÀ» ÀÔ·ÂÇÏ¼¼¿ä.(1~6°ª Áß ÇÏ³ª) ");
+				System.out.println("ì£¼ì‚¬ìœ„ ê°’ ë§ì¶”ê¸° ê²Œì„ì…ë‹ˆë‹¤.");
+				System.out.println("ì£¼ì‚¬ìœ„ ê°’ì„ ì…ë ¥í•˜ì„¸ìš”.(1~6ê°’ ì¤‘ í•˜ë‚˜) ");
 				you = sc.nextInt();
 				sc.nextLine();
 				if(g2.startGame(you) == 1) {
@@ -42,8 +42,8 @@ public class GameMain {
 				}
 				break;
 			case 'C':
-				System.out.println("¼ıÀÚ ¸ÂÃß±â °ÔÀÓÀÔ´Ï´Ù.");
-				System.out.println("1~100 Áß ÇÏ³ª¸¦ ÀÔ·ÂÇÏ¼¼¿ä.");
+				System.out.println("ìˆ«ì ë§ì¶”ê¸° ê²Œì„ì…ë‹ˆë‹¤.");
+				System.out.println("1~100 ì¤‘ í•˜ë‚˜ë¥¼ ì…ë ¥í•˜ì„¸ìš”.");
 				if(g3.startGame(0) == 1) {
 					wincnt++;
 				} else {
@@ -51,11 +51,11 @@ public class GameMain {
 				}
 				break;
 			case 'D':
-				System.out.println("°ÔÀÓÀ» Á¾·áÇÕ´Ï´Ù.");
-				System.out.printf("´ç½ÅÀÇ ÀüÀûÀº %d½Â %dÆĞ ÀÔ´Ï´Ù.", wincnt, losecnt);
+				System.out.println("ê²Œì„ì„ ì¢…ë£Œí•©ë‹ˆë‹¤.");
+				System.out.printf("ë‹¹ì‹ ì˜ ì „ì ì€ %dìŠ¹ %díŒ¨ ì…ë‹ˆë‹¤.", wincnt, losecnt);
 				break;
 			default:
-				System.out.println("´Ù½Ã ÀÔ·ÂÇÏ¼¼¿ä.");
+				System.out.println("ë‹¤ì‹œ ì…ë ¥í•˜ì„¸ìš”.");
 			}
 		}
 	}

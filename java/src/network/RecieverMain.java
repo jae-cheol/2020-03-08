@@ -7,16 +7,16 @@ public class RecieverMain {
 	public static void main(String[] args) {
 		try {
 			DatagramSocket socket = new DatagramSocket(10002);
-			System.out.println("[¼ö½Å ½ÃÀÛ]");
+			System.out.println("[ìˆ˜ì‹  ì‹œì‘]");
 			
 			byte[] bytes = new byte[100];
-													// Çì´õ¿¡ ºÙÀÏ ¼ö½ÅÀÚÀÇ Á¤º¸°¡ ÇÊ¿ä¾øÀ½.
+													// í—¤ë”ì— ë¶™ì¼ ìˆ˜ì‹ ìì˜ ì •ë³´ê°€ í•„ìš”ì—†ìŒ.
 			DatagramPacket packet = new DatagramPacket(bytes, bytes.length);
 			
 			while(true) {
-				socket.receive(packet);	// ÆĞÅ¶¿¡ ³Ö¾îÁØ´Ù.
+				socket.receive(packet);	// íŒ¨í‚·ì— ë„£ì–´ì¤€ë‹¤.
 				String msg = new String(packet.getData(), "utf-8");
-				System.out.println("[¼ö½ÅµÈ ³»¿ë] : " + msg);
+				System.out.println("[ìˆ˜ì‹ ëœ ë‚´ìš©] : " + msg);
 			}
 		} catch (Exception e) {
 			// TODO Auto-generated catch block

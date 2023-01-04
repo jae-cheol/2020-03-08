@@ -6,10 +6,10 @@ public class ApplicationUI extends BaseUI {
 	@Override
 	public void execute() throws Exception {
 
-		String id = scanStr("ID¸¦ ÀÔ·ÂÇÏ¼¼¿ä : ");
-		String pw = scanStr("PW¸¦ ÀÔ·ÂÇÏ¼¼¿ä : ");
-		String name = scanStr("ÀÌ¸§À» ÀÔ·ÂÇÏ¼¼¿ä : ");
-		String nick = scanStr("´Ğ³×ÀÓÀ» ÀÔ·ÂÇÏ¼¼¿ä : ");
+		String id = scanStr("IDë¥¼ ì…ë ¥í•˜ì„¸ìš” : ");
+		String pw = scanStr("PWë¥¼ ì…ë ¥í•˜ì„¸ìš” : ");
+		String name = scanStr("ì´ë¦„ì„ ì…ë ¥í•˜ì„¸ìš” : ");
+		String nick = scanStr("ë‹‰ë„¤ì„ì„ ì…ë ¥í•˜ì„¸ìš” : ");
 		
 		MemberVO member = new MemberVO();
 		member.setId(id);
@@ -19,7 +19,7 @@ public class ApplicationUI extends BaseUI {
 
 		service.insertBoard(member);
 		
-		System.out.println("°Ô½ÃÆÇ µî·ÏÀ» ¿Ï·áÇÏ¿´½À´Ï´Ù.");
+		System.out.println("ê²Œì‹œíŒ ë“±ë¡ì„ ì™„ë£Œí•˜ì˜€ìŠµë‹ˆë‹¤.");
 	}
 
 	

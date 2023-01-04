@@ -18,16 +18,16 @@ public class UpdateMain {
 			sql.append(" set name = ? ");
 			sql.append(" where id = ? ");
 			pstmt = conn.prepareStatement(sql.toString());
-			System.out.println("¾ÆÀÌµğ¸¦ ÀÔ·Â : ");
+			System.out.println("ì•„ì´ë””ë¥¼ ì…ë ¥ : ");
 			String id = sc.nextLine();
-			System.out.println("º¯°æÇÒ ÀÌ¸§À» ÀÔ·Â : ");
+			System.out.println("ë³€ê²½í•  ì´ë¦„ì„ ì…ë ¥ : ");
 			String name = sc.nextLine();
 			pstmt.setString(1, name);
 			pstmt.setString(2, id);
 			
-			// (insert , delete , update)¸Ş¼Òµå´Â »ğÀÔµÈ ÇàÀÇ ¼ö »Ì¾Æ³¿.
+			// (insert , delete , update)ë©”ì†Œë“œëŠ” ì‚½ì…ëœ í–‰ì˜ ìˆ˜ ë½‘ì•„ëƒ„.
 			int cnt = pstmt.executeUpdate(); 
-			System.out.println(cnt + "ÇàÀÌ ¼öÁ¤µÇ¾ú½À´Ï´Ù.");
+			System.out.println(cnt + "í–‰ì´ ìˆ˜ì •ë˜ì—ˆìŠµë‹ˆë‹¤.");
 		} catch(Exception e) { e.printStackTrace(); }
 		finally { JDBCClose.close(conn, pstmt); }
 	}

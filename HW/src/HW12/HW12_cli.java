@@ -9,14 +9,14 @@ import java.net.SocketException;
 import java.util.Scanner;
 
 /*
- * ¼­¹ö¿¡ Àü¼ÛÇÒ ¸Ş¼¼Áö ÀÔ·Â(Á¾·á½Ã quit) : hello
-¼­¹ö¿¡¼­ ÀçÀü¼ÛÇÑ ¸Ş¼¼Áö : hello
-¼­¹ö¿¡ Àü¼ÛÇÒ ¸Ş¼¼Áö ÀÔ·Â(Á¾·á½Ã quit) : ÇÏÀÌ
-¼­¹ö¿¡¼­ ÀçÀü¼ÛÇÑ ¸Ş¼¼Áö : ÇÏÀÌ
-¼­¹ö¿¡ Àü¼ÛÇÒ ¸Ş¼¼Áö ÀÔ·Â(Á¾·á½Ã quit) : bye
-¼­¹ö¿¡¼­ ÀçÀü¼ÛÇÑ ¸Ş¼¼Áö : bye
-¼­¹ö¿¡ Àü¼ÛÇÒ ¸Ş¼¼Áö ÀÔ·Â(Á¾·á½Ã quit) : quit
-¼­¹ö¿ÍÀÇ ¿¬°á Á¾·á
+ * ì„œë²„ì— ì „ì†¡í•  ë©”ì„¸ì§€ ì…ë ¥(ì¢…ë£Œì‹œ quit) : hello
+ì„œë²„ì—ì„œ ì¬ì „ì†¡í•œ ë©”ì„¸ì§€ : hello
+ì„œë²„ì— ì „ì†¡í•  ë©”ì„¸ì§€ ì…ë ¥(ì¢…ë£Œì‹œ quit) : í•˜ì´
+ì„œë²„ì—ì„œ ì¬ì „ì†¡í•œ ë©”ì„¸ì§€ : í•˜ì´
+ì„œë²„ì— ì „ì†¡í•  ë©”ì„¸ì§€ ì…ë ¥(ì¢…ë£Œì‹œ quit) : bye
+ì„œë²„ì—ì„œ ì¬ì „ì†¡í•œ ë©”ì„¸ì§€ : bye
+ì„œë²„ì— ì „ì†¡í•  ë©”ì„¸ì§€ ì…ë ¥(ì¢…ë£Œì‹œ quit) : quit
+ì„œë²„ì™€ì˜ ì—°ê²° ì¢…ë£Œ
  */
 public class HW12_cli {
 
@@ -30,21 +30,21 @@ public class HW12_cli {
 			OutputStream os = socket.getOutputStream();
 			DataOutputStream dos = new DataOutputStream(os);
 			
-			InputStream is = socket.getInputStream();	// outputstreamÀ¸·Î ³¯¶ó¿ÔÀ¸´Ï ÀÎÇ²À¸·Î.
+			InputStream is = socket.getInputStream();	// outputstreamìœ¼ë¡œ ë‚ ë¼ì™”ìœ¼ë‹ˆ ì¸í’‹ìœ¼ë¡œ.
 			DataInputStream dis = new DataInputStream(is);
 			while(true) {
-				System.out.print("¼­¹ö¿¡ Àü¼ÛÇÒ ¸Ş½ÃÁö ÀÔ·Â(Á¾·á½Ã quit) : ");
+				System.out.print("ì„œë²„ì— ì „ì†¡í•  ë©”ì‹œì§€ ì…ë ¥(ì¢…ë£Œì‹œ quit) : ");
 				String msg = sc.nextLine();
 				dos.writeUTF(msg);
 				try{
 					msg = dis.readUTF();
 				}catch(SocketException e){
-					System.out.println("Å¬¶óÀÌ¾ğÆ® Á¾·á");
+					System.out.println("í´ë¼ì´ì–¸íŠ¸ ì¢…ë£Œ");
 					break;
 				}
-				System.out.println("¼­¹ö¿¡¼­ ÀçÀü¼ÛÇÑ ¸Ş½ÃÁö : " + msg);
+				System.out.println("ì„œë²„ì—ì„œ ì¬ì „ì†¡í•œ ë©”ì‹œì§€ : " + msg);
 			}
-			System.out.println("¼­¹ö¿ÍÀÇ ¿¬°á Á¾·á");
+			System.out.println("ì„œë²„ì™€ì˜ ì—°ê²° ì¢…ë£Œ");
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

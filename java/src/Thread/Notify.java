@@ -3,16 +3,16 @@ package Thread;
 class Data {
 	public synchronized void a() {
 		try {
-			notify();	// wait À§ÂÊ¿¡¸¸ ÀÖÀ¸¸é µÊ.	wait()µÇ¾ú´ø°ÍÀÌ ´Ù½Ã ½ÇÇà»óÅÂ°¡µÊ. ±â´Ù¸®´ø ¾²·¹µå°¡ ±ú¾î³².
-			System.out.println("a() ¸Ş¼Òµå È£Ãâ...a");
-			wait();	// ´Ù¸¥ Thread¿¡°Ô Á¦¾î±ÇÀ» ³Ñ°ÜÁÖ°í ´Ù½Ã ´ë±â»óÅÂ·Î ÁøÀÔ.
+			notify();	// wait ìœ„ìª½ì—ë§Œ ìˆìœ¼ë©´ ë¨.	wait()ë˜ì—ˆë˜ê²ƒì´ ë‹¤ì‹œ ì‹¤í–‰ìƒíƒœê°€ë¨. ê¸°ë‹¤ë¦¬ë˜ ì“°ë ˆë“œê°€ ê¹¨ì–´ë‚¨.
+			System.out.println("a() ë©”ì†Œë“œ í˜¸ì¶œ...a");
+			wait();	// ë‹¤ë¥¸ Threadì—ê²Œ ì œì–´ê¶Œì„ ë„˜ê²¨ì£¼ê³  ë‹¤ì‹œ ëŒ€ê¸°ìƒíƒœë¡œ ì§„ì….
 		} catch (InterruptedException e) {e.printStackTrace();}
 	}
 	public synchronized void b() {
 		try {
-			System.out.println("b() ¸Ş¼Òµå È£Ãâ...");
-			notify();	// wait À§ÂÊ¿¡¸¸ ÀÖÀ¸¸é µÊ.	wait()µÇ¾ú´ø°ÍÀÌ ´Ù½Ã ½ÇÇà»óÅÂ°¡µÊ. ±â´Ù¸®´ø ¾²·¹µå°¡ ±ú¾î³².
-			wait();	// ´Ù¸¥ Thread¿¡°Ô Á¦¾î±ÇÀ» ³Ñ°ÜÁÖ°í ´Ù½Ã ´ë±â»óÅÂ·Î ÁøÀÔ.
+			System.out.println("b() ë©”ì†Œë“œ í˜¸ì¶œ...");
+			notify();	// wait ìœ„ìª½ì—ë§Œ ìˆìœ¼ë©´ ë¨.	wait()ë˜ì—ˆë˜ê²ƒì´ ë‹¤ì‹œ ì‹¤í–‰ìƒíƒœê°€ë¨. ê¸°ë‹¤ë¦¬ë˜ ì“°ë ˆë“œê°€ ê¹¨ì–´ë‚¨.
+			wait();	// ë‹¤ë¥¸ Threadì—ê²Œ ì œì–´ê¶Œì„ ë„˜ê²¨ì£¼ê³  ë‹¤ì‹œ ëŒ€ê¸°ìƒíƒœë¡œ ì§„ì….
 		} catch (InterruptedException e) {e.printStackTrace();}
 	}
 }

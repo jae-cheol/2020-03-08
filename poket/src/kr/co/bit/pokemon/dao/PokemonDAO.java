@@ -17,7 +17,7 @@ public class PokemonDAO {
 	private Connection conn = null;
 	private PreparedStatement pstmt = null;
 
-	// »ç³É
+	// ì‚¬ëƒ¥
 
 	public UserInfoVO selectUserInfo() throws Exception {
 		UserInfoVO user = null;
@@ -87,7 +87,7 @@ public class PokemonDAO {
 			pstmt.executeUpdate();
 
 		} catch (Exception e) {
-			// System.out.println("ÀÌ¹Ì °¡Áö°í ÀÖ´Â Æ÷ÄÏ¸óÀÔ´Ï´Ù.");
+			// System.out.println("ì´ë¯¸ ê°€ì§€ê³  ìˆëŠ” í¬ì¼“ëª¬ì…ë‹ˆë‹¤.");
 			num = 0;
 			// System.exit(0);
 		} finally {
@@ -124,7 +124,7 @@ public class PokemonDAO {
 		return monList;
 	}
 
-	// user ¼ÒÀ¯ Æ÷ÄÏ¸ó Á¤º¸ select
+	// user ì†Œìœ  í¬ì¼“ëª¬ ì •ë³´ select
 	public PokemonVO selectUserPokemonList(String _name) {
 		PokemonVO pokemon = null;
 
@@ -155,7 +155,7 @@ public class PokemonDAO {
 		return pokemon;
 	}
 
-	// ¸¶ÄÏ, Á¤º¸
+	// ë§ˆì¼“, ì •ë³´
 	public void sellPokemon(UserPokemonVO p) {
 
 		try {
@@ -259,7 +259,7 @@ public class PokemonDAO {
 		conn = ConnectionFactory.getConnection();
 
 		String sql = "SELECT p.* FROM pokemon_list p, user_pokemon u ";
-		sql += "WHERE p.name = u.name AND u.id = '·®' AND u.own = 1 order by price";
+		sql += "WHERE p.name = u.name AND u.id = 'ëŸ‰' AND u.own = 1 order by price";
 		try {
 			pstmt = conn.prepareStatement(sql);
 			// pstmt.setString(1, id);
@@ -290,7 +290,7 @@ public class PokemonDAO {
 		conn = ConnectionFactory.getConnection();
 
 		String sql = "SELECT p.* FROM pokemon_list p, user_pokemon u ";
-		sql += "WHERE p.name = u.name AND u.id = '·®' order by price";
+		sql += "WHERE p.name = u.name AND u.id = 'ëŸ‰' order by price";
 		try {
 			pstmt = conn.prepareStatement(sql);
 			// pstmt.setString(1, id);

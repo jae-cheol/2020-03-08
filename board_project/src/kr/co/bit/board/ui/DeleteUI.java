@@ -4,7 +4,7 @@ public class DeleteUI extends BaseUI {
 
 	@Override
 	public void execute() throws Exception {
-		System.out.println("°Ô½Ã±Û »èÁ¦È­¸é...");
+		System.out.println("ê²Œì‹œê¸€ ì‚­ì œí™”ë©´...");
 	}
 
 }

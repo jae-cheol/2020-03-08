@@ -14,16 +14,16 @@ public class BoardDAO2 {
 	}
 
 	/**
-	 * °Ô½Ã±ÛÀ» µî·ÏÇÏ´Â ¸Ş¼Òµå
-	 * @param °Ô½Ã±ÛVO
+	 * ê²Œì‹œê¸€ì„ ë“±ë¡í•˜ëŠ” ë©”ì†Œë“œ
+	 * @param ê²Œì‹œê¸€VO
 	 */
 	public void insertBoard(BoardVO board)  {
 		list.add(board);
-		System.out.println("dao¿¡¼­ °Ô½Ã±ÛÀ» µî·Ï..." + list.size() + "°³");
+		System.out.println("daoì—ì„œ ê²Œì‹œê¸€ì„ ë“±ë¡..." + list.size() + "ê°œ");
 	}
 	
 	/**
-	 * ÀüÃ¼°Ô½Ã¹°À» Á¶È¸ÇÏ´Â ¸Ş¼Òµå
+	 * ì „ì²´ê²Œì‹œë¬¼ì„ ì¡°íšŒí•˜ëŠ” ë©”ì†Œë“œ
 	 */
 	public List<BoardVO> selectBoard() {
 		

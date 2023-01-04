@@ -4,7 +4,7 @@ import kr.co.bit.board.service.BoardService;
 
 public class BoardServiceFactory {
 
-	private static BoardService service = null;	// staticÀÌ´Ï °è¼Ó µ¤¾î¾²±âµÇ¼­
+	private static BoardService service = null;	// staticì´ë‹ˆ ê³„ì† ë®ì–´ì“°ê¸°ë˜ì„œ
 	
 	public static BoardService getInstance() {
 		

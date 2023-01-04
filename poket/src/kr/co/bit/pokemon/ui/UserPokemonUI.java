@@ -11,9 +11,9 @@ public class UserPokemonUI extends BaseUI {
 	public void execute() throws Exception {
 		List<PokemonVO> list = service.selectUserPokemonList();
 		
-		System.out.println("¼ÒÀ¯ Æ÷ÄÏ¸ó ¸ñ·Ï : " + list.size() + " ¸¶¸®");
+		System.out.println("ì†Œìœ  í¬ì¼“ëª¬ ëª©ë¡ : " + list.size() + " ë§ˆë¦¬");
 		System.out.println("-------------------------------------------------------");
-		System.out.println("ÀÌ¸§\t°ø°İ·Â\t¹æ¾î·Â\t°¡°İ\tÈñ±Íµµ\tÃ¼·Â");
+		System.out.println("ì´ë¦„\tê³µê²©ë ¥\të°©ì–´ë ¥\tê°€ê²©\tí¬ê·€ë„\tì²´ë ¥");
 		System.out.println("-------------------------------------------------------");
 		for(PokemonVO p : list) {
 			System.out.println(p.getName() + "\t" + p.getOffensive() + "\t"
@@ -21,10 +21,10 @@ public class UserPokemonUI extends BaseUI {
 		}
 		UserInfoVO ui = service.money();
 		if(list.isEmpty()) {
-			System.out.println("Á¶È¸ÇÒ Æ÷ÄÏ¸óÀÌ ¾ø½À´Ï´Ù.");
+			System.out.println("ì¡°íšŒí•  í¬ì¼“ëª¬ì´ ì—†ìŠµë‹ˆë‹¤.");
 		}
 		System.out.println("-------------------------------------------------------");
-		System.out.println("ÇöÀç ÀÚ±İ : "+ui.getMoney());
+		System.out.println("í˜„ì¬ ìê¸ˆ : "+ui.getMoney());
 		System.out.println("-------------------------------------------------------");
 
 	}

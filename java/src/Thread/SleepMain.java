@@ -8,8 +8,8 @@ class SleepThread extends Thread {
 		while(true) {
 			try {
 				Thread.sleep(1000);
-											// ÇöÀçÁö¿ª¿¡¸ÂÃç¼­ ½Ã°£Á¤º¸¸¦ StringÀ¸·Î »Ì¾Æ³¿.
-				System.out.println("ÇöÀç½Ã°£ : " + new Date().toLocaleString());
+											// í˜„ì¬ì§€ì—­ì—ë§ì¶°ì„œ ì‹œê°„ì •ë³´ë¥¼ Stringìœ¼ë¡œ ë½‘ì•„ëƒ„.
+				System.out.println("í˜„ì¬ì‹œê°„ : " + new Date().toLocaleString());
 			} catch (InterruptedException e) {e.printStackTrace();}
 		}
 	}

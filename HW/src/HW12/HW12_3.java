@@ -3,7 +3,7 @@ package HW12;
 import java.util.Random;
 
 /*
- * 3. È«±æµ¿ÀÇ °èÁÂ¿¡¼­ È«±æµ¿, ¾î¸Ó´Ï, ¾Æ¹öÁö°¡ °¢°¢ Ãâ±İ, ÀÔ±İ, Ãâ±İ, ÀÔ±İÀ» ÇÑ´Ù°í ÇßÀ»¶§ÀÇ ´ÙÀ½ÀÇ °á°ú¸¦ º¸ÀÌ´Â ÄÚµå¸¦ ÀÛ¼ºÇÏ½Ã¿À.
+ * 3. í™ê¸¸ë™ì˜ ê³„ì¢Œì—ì„œ í™ê¸¸ë™, ì–´ë¨¸ë‹ˆ, ì•„ë²„ì§€ê°€ ê°ê° ì¶œê¸ˆ, ì…ê¸ˆ, ì¶œê¸ˆ, ì…ê¸ˆì„ í•œë‹¤ê³  í–ˆì„ë•Œì˜ ë‹¤ìŒì˜ ê²°ê³¼ë¥¼ ë³´ì´ëŠ” ì½”ë“œë¥¼ ì‘ì„±í•˜ì‹œì˜¤.
 
 class Account {
    private String name;
@@ -16,29 +16,29 @@ class User {
 }
 
 public static void main(String[] args) {
-  Account ac = new Account("È«±æµ¿", 10000);
-  new User("È«±æµ¿", ac);
-  new User("¾î¸Ó´Ï", ac);
-  new User("¾Æ¹öÁö", ac);
+  Account ac = new Account("í™ê¸¸ë™", 10000);
+  new User("í™ê¸¸ë™", ac);
+  new User("ì–´ë¨¸ë‹ˆ", ac);
+  new User("ì•„ë²„ì§€", ac);
  */
 class Account {
 	private String name;
 	private int money;
 
-	public void deposit(String name, int money) { // ÀÔ±İ
-		System.out.println(name + "°í°´´ÔÀÌ " + money + "¿øÀ» ÀÔ±İÇÏ¼Ì½À´Ï´Ù.");
+	public void deposit(String name, int money) { // ì…ê¸ˆ
+		System.out.println(name + "ê³ ê°ë‹˜ì´ " + money + "ì›ì„ ì…ê¸ˆí•˜ì…¨ìŠµë‹ˆë‹¤.");
 		this.money += money;
-		System.out.println("ÇöÀç ÀÜ¾×Àº " + this.money + "¿øÀÔ´Ï´Ù.");
+		System.out.println("í˜„ì¬ ì”ì•¡ì€ " + this.money + "ì›ì…ë‹ˆë‹¤.");
 	}
 
 	public synchronized void withdraw(String name, int money) {
-		System.out.println("Ãâ±İ±İ¾× : " + money + "¿ø");
+		System.out.println("ì¶œê¸ˆê¸ˆì•¡ : " + money + "ì›");
 		if (this.money >= money) {
 			this.money -= money;
-			System.out.println("ÇöÀç ÀÜ¾×Àº " + this.money + "¿øÀÔ´Ï´Ù.");
+			System.out.println("í˜„ì¬ ì”ì•¡ì€ " + this.money + "ì›ì…ë‹ˆë‹¤.");
 		} else {
-			System.out.println("= > ÀÜ¾×ÀÌ ºÎÁ·ÇÏ¿© Ãâ±İÀ» ÇÒ ¼ö ¾ø½À´Ï´Ù.");
-			System.out.println("ÇöÀç ÀÜ¾×Àº " + this.money + "¿øÀÔ´Ï´Ù.");
+			System.out.println("= > ì”ì•¡ì´ ë¶€ì¡±í•˜ì—¬ ì¶œê¸ˆì„ í•  ìˆ˜ ì—†ìŠµë‹ˆë‹¤.");
+			System.out.println("í˜„ì¬ ì”ì•¡ì€ " + this.money + "ì›ì…ë‹ˆë‹¤.");
 		}
 	}
 
@@ -49,24 +49,24 @@ class Account {
 	}
 
 	public synchronized void my() {
-		deposit("È«±æµ¿", Ran());
-		withdraw("È«±æµ¿", Ran());
-		deposit("È«±æµ¿", Ran());
-		withdraw("È«±æµ¿", Ran());
+		deposit("í™ê¸¸ë™", Ran());
+		withdraw("í™ê¸¸ë™", Ran());
+		deposit("í™ê¸¸ë™", Ran());
+		withdraw("í™ê¸¸ë™", Ran());
 	}
 
 	public synchronized void father() {
-		deposit("¾Æ¹öÁö", Ran());
-		deposit("¾Æ¹öÁö", Ran());
-		withdraw("¾Æ¹öÁö", Ran());
-		withdraw("¾Æ¹öÁö", Ran());
+		deposit("ì•„ë²„ì§€", Ran());
+		deposit("ì•„ë²„ì§€", Ran());
+		withdraw("ì•„ë²„ì§€", Ran());
+		withdraw("ì•„ë²„ì§€", Ran());
 	}
 
 	public synchronized void mother() {
-		deposit("¾î¸Ó´Ï", Ran());
-		deposit("¾î¸Ó´Ï", Ran());
-		withdraw("¾î¸Ó´Ï", Ran());
-		withdraw("¾î¸Ó´Ï", Ran());
+		deposit("ì–´ë¨¸ë‹ˆ", Ran());
+		deposit("ì–´ë¨¸ë‹ˆ", Ran());
+		withdraw("ì–´ë¨¸ë‹ˆ", Ran());
+		withdraw("ì–´ë¨¸ë‹ˆ", Ran());
 	}
 
 	public Account() {
@@ -123,10 +123,10 @@ class User extends Thread {
 public class HW12_3 {
 
 	public static void main(String[] args) {
-		Account ac = new Account("È«±æµ¿", 10000);
-//		new User("È«±æµ¿", ac);
-//		new User("¾î¸Ó´Ï", ac);
-//		new User("¾Æ¹öÁö", ac);
+		Account ac = new Account("í™ê¸¸ë™", 10000);
+//		new User("í™ê¸¸ë™", ac);
+//		new User("ì–´ë¨¸ë‹ˆ", ac);
+//		new User("ì•„ë²„ì§€", ac);
 		new User(ac, 1).start();
 		new User(ac, 2).start();
 		new User(ac, 3).start();

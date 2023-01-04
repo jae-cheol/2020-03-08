@@ -3,19 +3,19 @@ package network;
 import java.net.InetAddress;
 import java.net.UnknownHostException;
 
-public class InetÁÖ¼Ò {
+public class Inetì£¼ì†Œ {
 	public static void main(String[] args) {
 		
 		try {
 			InetAddress localhost = InetAddress.getLocalHost();
-			System.out.println("³» ÄÄÇ»ÅÍÀÇ ³×Æ®¿öÅ© ÀÌ¸§ : " + localhost.getHostName());
-			System.out.println("³» ÄÄÇ»ÅÍÀÇ IP ÁÖ¼Ò : " + localhost.getHostAddress());
+			System.out.println("ë‚´ ì»´í“¨í„°ì˜ ë„¤íŠ¸ì›Œí¬ ì´ë¦„ : " + localhost.getHostName());
+			System.out.println("ë‚´ ì»´í“¨í„°ì˜ IP ì£¼ì†Œ : " + localhost.getHostAddress());
 			
 			InetAddress addr = InetAddress.getByName("www.bitacademy.com");
-			System.out.println("ºñÆ®±³À°¼¾ÅÍÀÇ IPÁÖ¼Ò : " + addr);
+			System.out.println("ë¹„íŠ¸êµìœ¡ì„¼í„°ì˜ IPì£¼ì†Œ : " + addr);
 			
 			InetAddress[] addr2 = InetAddress.getAllByName("www.naver.com");
-			System.out.println("³×ÀÌ¹ö IP Á¤º¸ Ãâ·Â");
+			System.out.println("ë„¤ì´ë²„ IP ì •ë³´ ì¶œë ¥");
 			for(InetAddress address : addr2) {
 				System.out.println(address);
 			}

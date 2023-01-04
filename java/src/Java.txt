@@ -1,31 +1,31 @@
 
-2) Çüº¯È¯ : ¹¬½ÃÀû - ÀÛÀº°Ô Å«°É·Î
-		    ¸í½ÃÀû - Å«°Ô ÀÛÀº°É·Î
+2) í˜•ë³€í™˜ : ë¬µì‹œì  - ìž‘ì€ê²Œ í°ê±¸ë¡œ
+		    ëª…ì‹œì  - í°ê²Œ ìž‘ì€ê±¸ë¡œ
 		    
-3) Hash Code : JVMÀÇ °¡»ó ÁÖ¼ÒÄÚµå
+3) Hash Code : JVMì˜ ê°€ìƒ ì£¼ì†Œì½”ë“œ
 
-4) ÆÑÅä¸® ÆÐÅÏ - ÇÏ³ª¸¸µé°í °è¼Ó »ç¿ë.
+4) íŒ©í† ë¦¬ íŒ¨í„´ - í•˜ë‚˜ë§Œë“¤ê³  ê³„ì† ì‚¬ìš©.
 
-6) Ä³¸®Áö¸®ÅÏ / ¶óÀÎÇÇµå
-	ÆÄÀÏ¿¡ ÀÐ¾îµéÀÎ ³»¿ëÀ» ÀúÀåÇÏ·Á¸é FileWriter, BufferedWriter, PrinterWriter¸¦ ÀÌ¿ë.
-	ÇÏÁö¸¸ \r\nÀ» ¹®ÀÚ¿­ µÚ¿¡ µ¡ ºÙ¿©¾ß ÇÏ´Â ±ÍÂúÀ½Àº ¿©ÀüÈ÷ ³²¾ÆÀÖ´Ù. 
-	PrintWriter¸¦ ÀÌ¿ëÇÏ¸é \r\nÀ» µ¡ºÙÀÌ´Â ´ë½Å printlnÀÌ¶ó´Â ¸Þ½áµå¸¦ »ç¿ëÇÒ ¼ö ÀÖ°Ô µÈ´Ù.
-	¿ì¸®°¡ ÀÏ¹ÝÀûÀ¸·Î °ªÀ» JAVA IO¸¦ ÀÌ¿ëÇÏ¿© ÁÙ¹Ù²ÞÀ» Ç¥ÇöÇÒ ¶§, 
-	'\r''\n'ÀÌ¶ó´Â µÎ °³ÀÇ ¹®ÀÚ°¡ Àü´ÞµË´Ï´Ù.
-	'\r'Àº Carriage return(CR)ÀÌ¶ó°í ºÒ¸®¸ç, 
-	'\n'Àº Line feed(LF, newline)ÀÌ¶ó°í ºÒ¸³´Ï´Ù.
-	ÇÁ·Î±×·¡¹Ö ¾ð¾î¿¡¼­ ÁÙ¹Ù²Þ(°³Çà)À» ÇÏ±â À§ÇØ¼­´Â LF+CR, È¤Àº CR+LF Á¶ÇÕÀ¸·Î ÀÔ·ÂÇØ¾ß ÇÕ´Ï´Ù.
-	ÇÏÁö¸¸, ÈçÈ÷ JAVA¿¡¼­ »õ·Î¿î ¶óÀÎÀ¸·Î ¹Ù²Ü ¶§, '\n'À¸·Î¸¸ Ç¥ÇöÇÔ.
+6) ìºë¦¬ì§€ë¦¬í„´ / ë¼ì¸í”¼ë“œ
+	íŒŒì¼ì— ì½ì–´ë“¤ì¸ ë‚´ìš©ì„ ì €ìž¥í•˜ë ¤ë©´ FileWriter, BufferedWriter, PrinterWriterë¥¼ ì´ìš©.
+	í•˜ì§€ë§Œ \r\nì„ ë¬¸ìžì—´ ë’¤ì— ë§ ë¶™ì—¬ì•¼ í•˜ëŠ” ê·€ì°®ìŒì€ ì—¬ì „ížˆ ë‚¨ì•„ìžˆë‹¤. 
+	PrintWriterë¥¼ ì´ìš©í•˜ë©´ \r\nì„ ë§ë¶™ì´ëŠ” ëŒ€ì‹  printlnì´ë¼ëŠ” ë©”ì¨ë“œë¥¼ ì‚¬ìš©í•  ìˆ˜ ìžˆê²Œ ëœë‹¤.
+	ìš°ë¦¬ê°€ ì¼ë°˜ì ìœ¼ë¡œ ê°’ì„ JAVA IOë¥¼ ì´ìš©í•˜ì—¬ ì¤„ë°”ê¿ˆì„ í‘œí˜„í•  ë•Œ, 
+	'\r''\n'ì´ë¼ëŠ” ë‘ ê°œì˜ ë¬¸ìžê°€ ì „ë‹¬ë©ë‹ˆë‹¤.
+	'\r'ì€ Carriage return(CR)ì´ë¼ê³  ë¶ˆë¦¬ë©°, 
+	'\n'ì€ Line feed(LF, newline)ì´ë¼ê³  ë¶ˆë¦½ë‹ˆë‹¤.
+	í”„ë¡œê·¸ëž˜ë° ì–¸ì–´ì—ì„œ ì¤„ë°”ê¿ˆ(ê°œí–‰)ì„ í•˜ê¸° ìœ„í•´ì„œëŠ” LF+CR, í˜¹ì€ CR+LF ì¡°í•©ìœ¼ë¡œ ìž…ë ¥í•´ì•¼ í•©ë‹ˆë‹¤.
+	í•˜ì§€ë§Œ, í”ížˆ JAVAì—ì„œ ìƒˆë¡œìš´ ë¼ì¸ìœ¼ë¡œ ë°”ê¿€ ë•Œ, '\n'ìœ¼ë¡œë§Œ í‘œí˜„í•¨.
 	
-7) Å©±â
+7) í¬ê¸°
 	  	    char
 	byte < short < int < long < float < double
 	
-8) Çüº¯È¯
-	¿¬»êÀÚ¸¦ ±âÁØÀ¸·Î ÁÂº¯°ú ¿ìº¯ÀÇ ÀÚ·áÇüÀÌ ¼­·Î °°Àº °æ¿ì¸¸ ½ÇÇà
-	ÁÂº¯°ú ¿ìº¯ÀÇ ÀÚ·áÇüÀÌ ¼­·Î ´Ù¸¥ °æ¿ì¿¡ ¿¬»êÀ» ¼öÇàÇÏ±â À§ÇØ Çüº¯È¯ÀÌ ¹ß»ý
-	 - ¹¬½ÃÀûÇüº¯È¯
-	 - ¸í½ÃÀû(°­Á¦Àû)Çüº¯È¯
+8) í˜•ë³€í™˜
+	ì—°ì‚°ìžë¥¼ ê¸°ì¤€ìœ¼ë¡œ ì¢Œë³€ê³¼ ìš°ë³€ì˜ ìžë£Œí˜•ì´ ì„œë¡œ ê°™ì€ ê²½ìš°ë§Œ ì‹¤í–‰
+	ì¢Œë³€ê³¼ ìš°ë³€ì˜ ìžë£Œí˜•ì´ ì„œë¡œ ë‹¤ë¥¸ ê²½ìš°ì— ì—°ì‚°ì„ ìˆ˜í–‰í•˜ê¸° ìœ„í•´ í˜•ë³€í™˜ì´ ë°œìƒ
+	 - ë¬µì‹œì í˜•ë³€í™˜
+	 - ëª…ì‹œì (ê°•ì œì )í˜•ë³€í™˜
 	 
 9) super()
-	»ý¼ºÀÚ¿¡¼­ ¾²Áö ¾Ê¾Æµµ »ý·«µÇ¾îÀÖ¾î¼­, »ó¼Ó¹ÞÀº »ý¼ºÀÚ¸¦ È£Ãâ.
+	ìƒì„±ìžì—ì„œ ì“°ì§€ ì•Šì•„ë„ ìƒëžµë˜ì–´ìžˆì–´ì„œ, ìƒì†ë°›ì€ ìƒì„±ìžë¥¼ í˜¸ì¶œ.

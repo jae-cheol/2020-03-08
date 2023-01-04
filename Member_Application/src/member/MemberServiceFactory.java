@@ -4,7 +4,7 @@ import member.service.MemberService;
 
 public class MemberServiceFactory {
 
-	private static MemberService service = null;	// staticÀÌ´Ï °è¼Ó µ¤¾î¾²±âµÇ¼­
+	private static MemberService service = null;	// staticì´ë‹ˆ ê³„ì† ë®ì–´ì“°ê¸°ë˜ì„œ
 	
 	public static MemberService getInstance() {
 		

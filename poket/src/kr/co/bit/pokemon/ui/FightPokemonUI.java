@@ -13,8 +13,8 @@ public class FightPokemonUI extends BaseUI {
 	public void execute() throws Exception {
 
 		while (true) {
-			/* intro Ãâ·Â */
-			String str = "³» Æ÷ÄÏ¸óÀ¸·Î »ç³ÉÀ» ÇØº¸ÀÚ!!!!!\n";
+			/* intro ì¶œë ¥ */
+			String str = "ë‚´ í¬ì¼“ëª¬ìœ¼ë¡œ ì‚¬ëƒ¥ì„ í•´ë³´ì!!!!!\n";
 			System.out.println(str);
 			char[] intro = str.toCharArray();
 
@@ -29,49 +29,49 @@ public class FightPokemonUI extends BaseUI {
 
 			Rand rand = new Rand();
 			int monster_select = rand.rarity_Rand();
-			// Æ÷ÄÏ¸ó ·£´ı Ãâ¸ô
+			// í¬ì¼“ëª¬ ëœë¤ ì¶œëª°
 
 			UserInfoVO user = service.selectUserInfo();
 			List<PokemonVO> monlist = service.selectMonsterInfo();
 
-			// »ç³ÉÇÒ Æ÷ÄÏ¸ó°ú ½Î¿ï À¯Àú ¼ÒÀ¯ Æ÷ÄÏ¸ó ¸ñ·Ï È£Ãâ
+			// ì‚¬ëƒ¥í•  í¬ì¼“ëª¬ê³¼ ì‹¸ìš¸ ìœ ì € ì†Œìœ  í¬ì¼“ëª¬ ëª©ë¡ í˜¸ì¶œ
 			List<PokemonVO> userPokemonList = service.selectUserPokemonList();
 
 			// UserInfoVO p1 = new UserInfoVO();
 			PokemonVO mon1 = new PokemonVO();
 
-			// À¯Àú ¼ÒÀ¯ Æ÷ÄÏ¸ó Áß ¼±ÅÃµÈ Æ÷ÄÏ¸ó ÀúÀåÇÒ °´Ã¼ »ı¼º
+			// ìœ ì € ì†Œìœ  í¬ì¼“ëª¬ ì¤‘ ì„ íƒëœ í¬ì¼“ëª¬ ì €ì¥í•  ê°ì²´ ìƒì„±
 			PokemonVO selUserPokemon = new PokemonVO();
 
 			System.out.println();
-			System.out.println("¼ÒÀ¯ Æ÷ÄÏ¸ó ¸ñ·Ï : " + userPokemonList.size() + " ¸¶¸®");
+			System.out.println("ì†Œìœ  í¬ì¼“ëª¬ ëª©ë¡ : " + userPokemonList.size() + " ë§ˆë¦¬");
 			System.out.println("-------------------------------------------------------");
-			System.out.println("ÀÌ¸§\t°ø°İ·Â\t¹æ¾î·Â\t°¡°İ\tÈñ±Íµµ\tÃ¼·Â");
+			System.out.println("ì´ë¦„\tê³µê²©ë ¥\të°©ì–´ë ¥\tê°€ê²©\tí¬ê·€ë„\tì²´ë ¥");
 			System.out.println("-------------------------------------------------------");
 			for (PokemonVO p : userPokemonList) {
 				System.out.println(p.getName() + "\t" + p.getOffensive() + "\t" + p.getDefensive() + "\t" + p.getPrice()
 						+ "\t" + p.getRarity() + "\t" + p.getLife());
 			}
 			if (userPokemonList.isEmpty()) {
-				System.out.println("Á¶È¸ÇÒ Æ÷ÄÏ¸óÀÌ ¾ø½À´Ï´Ù.");
+				System.out.println("ì¡°íšŒí•  í¬ì¼“ëª¬ì´ ì—†ìŠµë‹ˆë‹¤.");
 			}
 			System.out.println("-------------------------------------------------------");
 
-			// Æ÷ÄÏ¸ó ¼±ÅÃ
+			// í¬ì¼“ëª¬ ì„ íƒ
 
-			// DB¿¡ ¾ø´Â °ª ÀÔ·Â ½Ã Àç½ÇÇà ½ÃÅ°±â À§ÇÑ º¯¼ö
+			// DBì— ì—†ëŠ” ê°’ ì…ë ¥ ì‹œ ì¬ì‹¤í–‰ ì‹œí‚¤ê¸° ìœ„í•œ ë³€ìˆ˜
 			boolean bool = true;
 			// ll:
 			while (bool) {
-				// String selPokemonName = scanString("\n½Î¿ï Æ÷ÄÏ¸óÀ» °í¸£¼¼¿ä : ");
+				// String selPokemonName = scanString("\nì‹¸ìš¸ í¬ì¼“ëª¬ì„ ê³ ë¥´ì„¸ìš” : ");
 
-				// ¼±ÅÃÇÑ Æ÷ÄÏ¸ó ÀÌ¸§°ú DB µ¥ÀÌÅÍ ¸ÅÄ¡µÇ´ÂÁö Ã¼Å©ÇÏ´Â º¯¼ö
+				// ì„ íƒí•œ í¬ì¼“ëª¬ ì´ë¦„ê³¼ DB ë°ì´í„° ë§¤ì¹˜ë˜ëŠ”ì§€ ì²´í¬í•˜ëŠ” ë³€ìˆ˜
 				boolean check = true;
 
 				for (PokemonVO selPokemon : userPokemonList) {
 
-					// ¼±ÅÃÇÑ Æ÷ÄÏ¸ó ÀÌ¸§°ú DB µ¥ÀÌÅÍ ¸ÅÄ¡µÇ¸é PokemonVO °´Ã¼¿¡ ¼±ÅÃÇÑ Æ÷ÄÏ¸ó µ¥ÀÌÅÍ ÀúÀå
-					if (selPokemon.getName().equals("´ÙÅ©¶óÀÌ")) {
+					// ì„ íƒí•œ í¬ì¼“ëª¬ ì´ë¦„ê³¼ DB ë°ì´í„° ë§¤ì¹˜ë˜ë©´ PokemonVO ê°ì²´ì— ì„ íƒí•œ í¬ì¼“ëª¬ ë°ì´í„° ì €ì¥
+					if (selPokemon.getName().equals("ë‹¤í¬ë¼ì´")) {
 						selUserPokemon.setStat(selPokemon.getName(), selPokemon.getOffensive(),
 								selPokemon.getDefensive(), selPokemon.getPrice(), selPokemon.getRarity(),
 								selPokemon.getLife());
@@ -82,7 +82,7 @@ public class FightPokemonUI extends BaseUI {
 					}
 				}
 				if (!check)
-					System.out.println("³» Æ÷ÄÏ¸óÀÌ ¾Æ´Õ´Ï´Ù. ´Ù½Ã °í¸£¼¼¿ä.");
+					System.out.println("ë‚´ í¬ì¼“ëª¬ì´ ì•„ë‹™ë‹ˆë‹¤. ë‹¤ì‹œ ê³ ë¥´ì„¸ìš”.");
 			}
 
 			// System.out.println(monster_select);
@@ -91,16 +91,16 @@ public class FightPokemonUI extends BaseUI {
 			// selUserPokemon.setStat(user.getId(), user.getOffensive()+30,
 			// user.getDefensive(), user.getLife(), user.getMoney());
 			// }
-			// DBÀÇ À¯ÀúÁ¤º¸¸¦ °¡Á®¿Í¼­ selUserPokemon°´Ã¼¿¡ ³Ö¾î¼­ »ç¿ë.
+			// DBì˜ ìœ ì €ì •ë³´ë¥¼ ê°€ì ¸ì™€ì„œ selUserPokemonê°ì²´ì— ë„£ì–´ì„œ ì‚¬ìš©.
 
 			mon1.setStat(monlist.get(monster_select).getName(), monlist.get(monster_select).getOffensive(),
 					monlist.get(monster_select).getDefensive(), monlist.get(monster_select).getPrice(),
 					monlist.get(monster_select).getRarity(), monlist.get(monster_select).getLife());
-			// DBÀÇ Æ÷ÄÏ¸óÁß Ãâ¸ôÇÑ Æ÷ÄÏ¸óÀÇ Á¤º¸¸¦ °¡Á®¿Í¼­ mon1°´Ã¼¿¡ ³Ö¾î¼­ »ç¿ë.
+			// DBì˜ í¬ì¼“ëª¬ì¤‘ ì¶œëª°í•œ í¬ì¼“ëª¬ì˜ ì •ë³´ë¥¼ ê°€ì ¸ì™€ì„œ mon1ê°ì²´ì— ë„£ì–´ì„œ ì‚¬ìš©.
 
 			System.out.println();
-			System.out.println("ÁÁ¾Æ!!! " + mon1.getName() + " ¹ß°ß!!!");
-			System.out.println(mon1.getName() + " ½Î¿ìÀÚ!!");
+			System.out.println("ì¢‹ì•„!!! " + mon1.getName() + " ë°œê²¬!!!");
+			System.out.println(mon1.getName() + " ì‹¸ìš°ì!!");
 			System.out.println();
 			System.out.println("-----------------------------------------------------------");
 			System.out.println(selUserPokemon.toString());
@@ -108,49 +108,49 @@ public class FightPokemonUI extends BaseUI {
 			System.out.println("-----------------------------------------------------------");
 			
 			int battle_cnt = 0;
-			// ÀüÅõÀÇ ·çÇÁ È½¼ö
+			// ì „íˆ¬ì˜ ë£¨í”„ íšŸìˆ˜
 			
 			while (battle_cnt < 15) {
 				battle_cnt++;
 
 				selUserPokemon.Attack(mon1.getOffensive());
 				mon1.Attack(selUserPokemon.getOffensive());
-				// ¼­·Î 1ÅÏ¾¿ °ø°İ
+				// ì„œë¡œ 1í„´ì”© ê³µê²©
 
 				selUserPokemon.PrintHp(mon1.getName());
 				mon1.PrintHp(selUserPokemon.getName());
 				System.out.println();
 				Thread.sleep(300);
 				if (battle_cnt == 15) {
-					System.out.println("µÑ ´Ù ¸ğµÎ ÁöÃÆ½À´Ï´Ù.");
+					System.out.println("ë‘˜ ë‹¤ ëª¨ë‘ ì§€ì³¤ìŠµë‹ˆë‹¤.");
 					break;
 				}
 
 				if (selUserPokemon.getLife() <= 0 && mon1.getLife() <= 0) {
-					System.out.println("ºñ°å½À´Ï´Ù. " + mon1.getName() + "ÀÌ(°¡) µµ¸Á°©´Ï´Ù.");
+					System.out.println("ë¹„ê²¼ìŠµë‹ˆë‹¤. " + mon1.getName() + "ì´(ê°€) ë„ë§ê°‘ë‹ˆë‹¤.");
 					break;
 				}
 				if (selUserPokemon.getLife() <= 0 && mon1.getLife() >= 0) {
-					System.out.println("Á³´Ù... " + selUserPokemon.getName() + "ÀÌ(°¡) µµ¸Á°£´Ù!!!");
+					System.out.println("ì¡Œë‹¤... " + selUserPokemon.getName() + "ì´(ê°€) ë„ë§ê°„ë‹¤!!!");
 					UserPokemonVO userPokemon = new UserPokemonVO(user.getId(), selUserPokemon.getName());
 					service.sellPokemon(userPokemon);
 					break;
 				}
 				if (selUserPokemon.getLife() >= 0 && mon1.getLife() <= 0) {
-					// ÃÊ±â°ªÀÌ 1ÀÌ¶ó¼­ Ã³À½¿£ ¹«Á¶°Ç È¹µæÇÏ°í, ¸®ÅÏÇÏ±âÀü 0À¸·Î ¸¸µé¾îÁÖ±â ¶§¹®¿¡ 0À¸·Î ÇØ¾ß Àâ¾Ò´Ù´Â
-					// ¸Ş½ÃÁö
-					// Ãâ·Â.
+					// ì´ˆê¸°ê°’ì´ 1ì´ë¼ì„œ ì²˜ìŒì—” ë¬´ì¡°ê±´ íšë“í•˜ê³ , ë¦¬í„´í•˜ê¸°ì „ 0ìœ¼ë¡œ ë§Œë“¤ì–´ì£¼ê¸° ë•Œë¬¸ì— 0ìœ¼ë¡œ í•´ì•¼ ì¡ì•˜ë‹¤ëŠ”
+					// ë©”ì‹œì§€
+					// ì¶œë ¥.
 					UserPokemonVO userPokemon = new UserPokemonVO(user.getId(), mon1.getName());
 
 					if (service.insertPokemon(userPokemon) == 1) {
-						System.out.println(mon1.getName() + "!!! ³Í ³»²¨¾ß!!");
-						System.out.println(mon1.getName() + "¸¦ Àâ¾Ò½À´Ï´Ù. ÀÚ¼¼ÇÑ Á¤º¸´Â ¼ÒÀ¯ Æ÷ÄÏ¸ó ¸ñ·ÏÀ» È®ÀÎÇØÁÖ¼¼¿ä.");
+						System.out.println(mon1.getName() + "!!! ë„Œ ë‚´êº¼ì•¼!!");
+						System.out.println(mon1.getName() + "ë¥¼ ì¡ì•˜ìŠµë‹ˆë‹¤. ìì„¸í•œ ì •ë³´ëŠ” ì†Œìœ  í¬ì¼“ëª¬ ëª©ë¡ì„ í™•ì¸í•´ì£¼ì„¸ìš”.");
 					} else {
 						if (service.own1Pokemon(userPokemon) == 1) {
-							System.out.println(mon1.getName() + "!!! ³Í ³»²¨¾ß!!");
-							System.out.println(mon1.getName() + "¸¦ Àâ¾Ò½À´Ï´Ù. ÀÚ¼¼ÇÑ Á¤º¸´Â ¼ÒÀ¯ Æ÷ÄÏ¸ó ¸ñ·ÏÀ» È®ÀÎÇØÁÖ¼¼¿ä.");
+							System.out.println(mon1.getName() + "!!! ë„Œ ë‚´êº¼ì•¼!!");
+							System.out.println(mon1.getName() + "ë¥¼ ì¡ì•˜ìŠµë‹ˆë‹¤. ìì„¸í•œ ì •ë³´ëŠ” ì†Œìœ  í¬ì¼“ëª¬ ëª©ë¡ì„ í™•ì¸í•´ì£¼ì„¸ìš”.");
 						} else
-							System.out.println("ÀÌ¹Ì °°Àº Á¾·ù Æ÷ÄÏ¸óÀÌ ÀÖ¾î ³öÁÖµµ·Ï ÇÏ°Ú½À´Ï´Ù.");
+							System.out.println("ì´ë¯¸ ê°™ì€ ì¢…ë¥˜ í¬ì¼“ëª¬ì´ ìˆì–´ ë†”ì£¼ë„ë¡ í•˜ê² ìŠµë‹ˆë‹¤.");
 					}
 
 					break;

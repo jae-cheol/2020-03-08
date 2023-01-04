@@ -7,7 +7,7 @@ import java.io.Writer;
 
 public class FileClose {
 	
-	// ´Ù¸¥ ÆĞÅ°Áö¿¡¼­ ¸Ş¼Òµå ½á¾ßµÊ
+	// ë‹¤ë¥¸ íŒ¨í‚¤ì§€ì—ì„œ ë©”ì†Œë“œ ì¨ì•¼ë¨
 	public static void close(Reader r) {
 		
 		try {

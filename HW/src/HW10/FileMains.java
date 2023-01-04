@@ -8,15 +8,15 @@ class InputManagers{
 	public static File fileInputManager(){
 		File file;
 		while(true){
-			System.out.print("ÃÊ±â Æú´õ °æ·Î ÀÔ·Â : ");
+			System.out.print("ì´ˆê¸° í´ë” ê²½ë¡œ ì…ë ¥ : ");
 			String initPath = Util.sc.nextLine();
 			file = new File(initPath);
 			if(!file.exists()){
-				System.out.println("Æú´õ°¡ Á¸ÀçÇÏÁö ¾Ê½À´Ï´Ù.");
+				System.out.println("í´ë”ê°€ ì¡´ì¬í•˜ì§€ ì•ŠìŠµë‹ˆë‹¤.");
 				continue;
 			}
 			if(!file.isDirectory()){ 
-				System.out.println("µğ·ºÅÍ¸® ÆÄÀÏÀÌ ¾Æ´Õ´Ï´Ù.");
+				System.out.println("ë””ë ‰í„°ë¦¬ íŒŒì¼ì´ ì•„ë‹™ë‹ˆë‹¤.");
 				continue;
 			}
 			break;
@@ -33,7 +33,7 @@ class FileManagers{
 	public void printFileInfo(){
 		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd hh:mm\t");
 		System.out.println("=================================================");
-		System.out.println("|\t¸¶Áö¸·¼öÁ¤³¯Â¥\tÇü½Ä\tÅ©±â\tÀÌ¸§\t|");
+		System.out.println("|\të§ˆì§€ë§‰ìˆ˜ì •ë‚ ì§œ\tí˜•ì‹\tí¬ê¸°\tì´ë¦„\t|");
 		System.out.println("=================================================");
 		File[] files = file.listFiles();
 		try{

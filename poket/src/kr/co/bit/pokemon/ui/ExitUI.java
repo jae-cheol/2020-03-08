@@ -6,7 +6,7 @@ public class ExitUI extends BaseUI {
 	public void execute() throws Exception {
 		System.out.println();
 		System.out.println("--------------------------------------------");
-		System.out.println("\tPokemon GO Á¾·á");
+		System.out.println("\tPokemon GO ì¢…ë£Œ");
 		System.out.println("--------------------------------------------");
 		System.exit(0);
 

@@ -11,7 +11,7 @@ import kr.co.bit.util.ConnectionFactory;
 import kr.co.bit.util.JDBCClose;
 
 /*
- * DB¿¡ °Ô½Ã¹°°ü¸®
+ * DBì— ê²Œì‹œë¬¼ê´€ë¦¬
  */
 public class BoardDAO {
 
@@ -19,8 +19,8 @@ public class BoardDAO {
 	private PreparedStatement pstmt = null;
 
 	/**
-	 * °Ô½Ã±ÛÀ» µî·ÏÇÏ´Â ¸Ş¼Òµå
-	 * @param °Ô½Ã±ÛVO
+	 * ê²Œì‹œê¸€ì„ ë“±ë¡í•˜ëŠ” ë©”ì†Œë“œ
+	 * @param ê²Œì‹œê¸€VO
 	 */
 	public void insertBoard(BoardVO board)  {
 	
@@ -45,7 +45,7 @@ public class BoardDAO {
 	}
 	
 	/**
-	 * ÀüÃ¼°Ô½Ã¹°À» Á¶È¸ÇÏ´Â ¸Ş¼Òµå
+	 * ì „ì²´ê²Œì‹œë¬¼ì„ ì¡°íšŒí•˜ëŠ” ë©”ì†Œë“œ
 	 */
 	public List<BoardVO> selectBoard() throws Exception {
 		
@@ -83,7 +83,7 @@ public class BoardDAO {
 	}
 	
 	/**
-	 * ±Û¹øÈ£¿¡ ÇØ´çÇÏ´Â °Ô½Ã¹° Á¶È¸
+	 * ê¸€ë²ˆí˜¸ì— í•´ë‹¹í•˜ëŠ” ê²Œì‹œë¬¼ ì¡°íšŒ
 	 */
 	public BoardVO selectOneBoard(BoardVO board) {
 		

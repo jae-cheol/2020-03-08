@@ -11,18 +11,18 @@ class PriorityThread extends Thread {
 
 	@Override
 	public void run() {
-		System.out.println(getName() + "¿ì¼±¼øÀ§ : " + getPriority());	
+		System.out.println(getName() + "ìš°ì„ ìˆœìœ„ : " + getPriority());	
 		for(int i=1; i<=100; i++) {
-			System.out.println(getName() + " : " + i + "¹øÂ° ÀÛ¾÷Áß...");
+			System.out.println(getName() + " : " + i + "ë²ˆì§¸ ìž‘ì—…ì¤‘...");
 		}
 	}	
 }
 
 public class PriorityThreadMain {
 	public static void main(String[] args) {
-		PriorityThread pt = new PriorityThread("¿ì¼±¼øÀ§1ÀÎ ½º·¹µå");
-		PriorityThread pt2 = new PriorityThread("¿ì¼±¼øÀ§10ÀÎ ½º·¹µå");
-		PriorityThread pt3 = new PriorityThread("¿ì¼±¼øÀ§5ÀÎ ½º·¹µå");
+		PriorityThread pt = new PriorityThread("ìš°ì„ ìˆœìœ„1ì¸ ìŠ¤ë ˆë“œ");
+		PriorityThread pt2 = new PriorityThread("ìš°ì„ ìˆœìœ„10ì¸ ìŠ¤ë ˆë“œ");
+		PriorityThread pt3 = new PriorityThread("ìš°ì„ ìˆœìœ„5ì¸ ìŠ¤ë ˆë“œ");
 		
 		pt.setPriority(Thread.MIN_PRIORITY);
 		pt2.setPriority(Thread.MAX_PRIORITY);

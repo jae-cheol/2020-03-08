@@ -11,16 +11,16 @@ public class SearchAllUI extends BaseUI {
 
 		List<BoardVO> list = service.selectBoard();
 
-		System.out.println("°Ô½Ã¹° ¸ñ·Ï : " + list.size() + "°³");
+		System.out.println("ê²Œì‹œë¬¼ ëª©ë¡ : " + list.size() + "ê°œ");
 		System.out.println("-------------------------------------------------------");
-		System.out.println("¹øÈ£\t±Û¾´ÀÌ\tµî·ÏÀÏ\tÁ¦¸ñ");
+		System.out.println("ë²ˆí˜¸\tê¸€ì“´ì´\të“±ë¡ì¼\tì œëª©");
 		System.out.println("-------------------------------------------------------");
 		for(BoardVO board : list) {
 			System.out.println(board.getNo() + "\t" + board.getWriter() + "\t"
 					+ board.getRegDate() + "\t" + board.getTitle());
 		}
 		if(list.isEmpty()) {
-			System.out.println("Á¶È¸ÇÒ °Ô½Ã¹°ÀÌ ¾ø½À´Ï´Ù.");
+			System.out.println("ì¡°íšŒí•  ê²Œì‹œë¬¼ì´ ì—†ìŠµë‹ˆë‹¤.");
 		}
 		System.out.println("-------------------------------------------------------");
 	}

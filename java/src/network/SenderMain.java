@@ -7,11 +7,11 @@ import java.net.InetSocketAddress;
 public class SenderMain {
 	public static void main(String[] args) {
 		try {
-			DatagramSocket socket = new DatagramSocket();	// º¸³»´Â»ç¶÷ÀÌ³ª ¹ŞÀ»»ç¶÷ Á¤º¸¸¦ ³Ö¾îÁÜ.
-			System.out.println("[¼Û½Å ½ÃÀÛ]");
+			DatagramSocket socket = new DatagramSocket();	// ë³´ë‚´ëŠ”ì‚¬ëŒì´ë‚˜ ë°›ì„ì‚¬ëŒ ì •ë³´ë¥¼ ë„£ì–´ì¤Œ.
+			System.out.println("[ì†¡ì‹  ì‹œì‘]");
 			for(int i=1; i<=3; i++) {
-				String msg = "¸Ş½ÃÁö-" + i;
-				byte[] bytes = msg.getBytes("utf-8");	// ÇÑ±ÛÀ» 3¹ÙÀÌÆ®·Î ÀÎ½Ä.
+				String msg = "ë©”ì‹œì§€-" + i;
+				byte[] bytes = msg.getBytes("utf-8");	// í•œê¸€ì„ 3ë°”ì´íŠ¸ë¡œ ì¸ì‹.
 				
 				DatagramPacket packet
 					= new DatagramPacket(bytes, 
@@ -19,10 +19,10 @@ public class SenderMain {
 										 new InetSocketAddress("localhost", 10002));
 				Thread.sleep(1000); 
 				socket.send(packet);
-				System.out.println("Àü¼ÛÇÑ µ¥ÀÌÅÍÀÇ Å©±â : " + bytes.length);
+				System.out.println("ì „ì†¡í•œ ë°ì´í„°ì˜ í¬ê¸° : " + bytes.length);
 			}
 			
-			System.out.println("[¼Û½Å ¿Ï·á]");
+			System.out.println("[ì†¡ì‹  ì™„ë£Œ]");
 			socket.close();
 		} catch (Exception e) {
 			// TODO Auto-generated catch block

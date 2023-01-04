@@ -31,22 +31,22 @@ public class BoardUI extends BaseUI {
 			if(ui != null)
 				ui.execute();
 			else
-				System.out.println("Ç×¸ñÀ» Àß¸ø¼±ÅÃÇÏ¼Ì½À´Ï´Ù.");
+				System.out.println("í•­ëª©ì„ ì˜ëª»ì„ íƒí•˜ì…¨ìŠµë‹ˆë‹¤.");
 		}
 	}
 
 	private int menu() {
 		System.out.println("------------------------------------------");
-		System.out.println("\t°Ô½ÃÆÇ °ü¸® ÇÁ·Î±×·¥");
+		System.out.println("\tê²Œì‹œíŒ ê´€ë¦¬ í”„ë¡œê·¸ë¨");
 		System.out.println("------------------------------------------");
-		System.out.println("1. ÀüÃ¼ °Ô½Ã±Û Á¶È¸");
-		System.out.println("2. ±Û¹øÈ£ Á¶È¸");
-		System.out.println("3. »õ±Û µî·Ï");
-		System.out.println("4. °Ô½Ã±Û ¼öÁ¤");
-		System.out.println("5. °Ô½Ã±Û »èÁ¦");
-		System.out.println("0. Á¾·á");
+		System.out.println("1. ì „ì²´ ê²Œì‹œê¸€ ì¡°íšŒ");
+		System.out.println("2. ê¸€ë²ˆí˜¸ ì¡°íšŒ");
+		System.out.println("3. ìƒˆê¸€ ë“±ë¡");
+		System.out.println("4. ê²Œì‹œê¸€ ìˆ˜ì •");
+		System.out.println("5. ê²Œì‹œê¸€ ì‚­ì œ");
+		System.out.println("0. ì¢…ë£Œ");
 		System.out.println("------------------------------------------");
-		int type = scanInt("¸Ş´ºÁß ¿øÇÏ´Â Ç×¸ñÀ» ¼±ÅÃÇÏ¼¼¿ä : ");
+		int type = scanInt("ë©”ë‰´ì¤‘ ì›í•˜ëŠ” í•­ëª©ì„ ì„ íƒí•˜ì„¸ìš” : ");
 		
 		return type;
 	}

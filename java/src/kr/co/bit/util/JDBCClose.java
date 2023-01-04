@@ -4,9 +4,9 @@ import java.sql.Connection;
 import java.sql.Statement;
 
 public class JDBCClose {
-	// °´Ã¼»ı¼º ¾ÈÇÏ°í ¸¸µé¼öÀÖ´Â static	// prepareStatement ¸¦ »ó¼ÓÇØÁÖ´Ï±ñ.
+	// ê°ì²´ìƒì„± ì•ˆí•˜ê³  ë§Œë“¤ìˆ˜ìˆëŠ” static	// prepareStatement ë¥¼ ìƒì†í•´ì£¼ë‹ˆê¹.
 	public static void close(Connection conn, Statement stmt) {
-		// 5´Ü°è : DBÁ¢¼Ó ÇØÁ¦ - ¿¬°áÇØÁ¦ - finally¿¡ ÀÖ¾î¾ßÇÔ.
+		// 5ë‹¨ê³„ : DBì ‘ì† í•´ì œ - ì—°ê²°í•´ì œ - finallyì— ìˆì–´ì•¼í•¨.
 		try {
 			if (conn != null) {
 				conn.close();

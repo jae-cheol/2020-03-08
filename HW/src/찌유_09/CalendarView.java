@@ -1,4 +1,4 @@
-package ÂîÀ¯_09;
+package ì°Œìœ _09;
 
 import java.util.Scanner;
 
@@ -21,20 +21,20 @@ public class CalendarView {
 	public void process() {
 
 		while (true) {
-			int type = scanInt("Ç×¸ñÀ» ¼±ÅÃÇÏ¼¼¿ä(1. Æ¯Á¤³âµµ   2. Æ¯Á¤¿ù   3. Á¾·á) : ");
+			int type = scanInt("í•­ëª©ì„ ì„ íƒí•˜ì„¸ìš”(1. íŠ¹ì •ë…„ë„   2. íŠ¹ì •ì›”   3. ì¢…ë£Œ) : ");
 			int year = 0, month = 0;
 			switch (type) {
 			case 1:
-				year = scanInt("³âµµ ÀÔ·Â : ");
+				year = scanInt("ë…„ë„ ì…ë ¥ : ");
 				util.showByYear(year);
 				break;
 			case 2:
-				year = scanInt("³âµµ ÀÔ·Â : ");
-				month = scanInt("¿ù ÀÔ·Â : ");
+				year = scanInt("ë…„ë„ ì…ë ¥ : ");
+				month = scanInt("ì›” ì…ë ¥ : ");
 				util.showByMonth(year, month);
 				break;
 			case 3:
-				System.out.println("´Ş·Â ÇÁ·Î±×·¥À» Á¾·áÇÕ´Ï´Ù.");
+				System.out.println("ë‹¬ë ¥ í”„ë¡œê·¸ë¨ì„ ì¢…ë£Œí•©ë‹ˆë‹¤.");
 				System.exit(0);
 				break;
 			}

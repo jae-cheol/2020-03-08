@@ -17,7 +17,7 @@ public class BoardService2 {
 	}
 
 	public void insertBoard(BoardVO board) {
-		// µî·ÏÇÒ °Ô½Ã¹° ¹øÈ£, µî·ÏÀÏÀ» BoardVO°´Ã¼¿¡ setting
+		// ë“±ë¡í•  ê²Œì‹œë¬¼ ë²ˆí˜¸, ë“±ë¡ì¼ì„ BoardVOê°ì²´ì— setting
 		board.setRegDate(new SimpleDateFormat("yyyy-MM-dd").format(new Date()));
 		board.setNo(no++);
 		dao.insertBoard(board);

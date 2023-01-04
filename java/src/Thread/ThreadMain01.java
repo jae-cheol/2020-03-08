@@ -1,6 +1,6 @@
 package Thread;
 
-class AAA extends Thread { // Thread ¸¦ »ó¼Ó¹ŞÀ¸¸é Thread °´Ã¼°¡ µÊ.
+class AAA extends Thread { // Thread ë¥¼ ìƒì†ë°›ìœ¼ë©´ Thread ê°ì²´ê°€ ë¨.
 	public void run() {
 		while (true) {
 			System.out.println("go!!!");
@@ -22,7 +22,7 @@ public class ThreadMain01 {
 		AAA ta = new AAA();
 		BBB tb = new BBB();
 		
-		// Thread Queue ¿¡ Thread¸¸ Áı¾î³ÖÀ¸¸é µÊ. runÀº ¾Ë¾Æ¼­ ÇÔ.
+		// Thread Queue ì— Threadë§Œ ì§‘ì–´ë„£ìœ¼ë©´ ë¨. runì€ ì•Œì•„ì„œ í•¨.
 		ta.start();
 		tb.start();
 	}

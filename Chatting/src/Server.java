@@ -73,21 +73,21 @@ class ServerThread extends Thread{
 			br = new BufferedReader(isr);
 			while(true){
 				String msg = br.readLine();
-				if(msg == null) break; // Á¢¼Ó ÇØÁ¦
-				if(msg.length() >= Constants.getSecretLength()){ // ±Ó¼Ó¸»ÀÎÁö °Ë»ç
+				if(msg == null) break; // ì ‘ì† í•´ì œ
+				if(msg.length() >= Constants.getSecretLength()){ // ê·“ì†ë§ì¸ì§€ ê²€ì‚¬
 					if(msg.substring(msg.length() - Constants.getSecretLength()).equals(Constants.secret)){
 						msg = msg.substring(0, msg.length() - Constants.getSecretLength());
 						isWhisper = true;
 					}
 				}
 				System.out.println(msg);
-				if(isWhisper){ // ±Ó¼Ó¸»
+				if(isWhisper){ // ê·“ì†ë§
 					OutputStreamWriter osw = new OutputStreamWriter(client.getOutputStream());
 					PrintWriter pr = new PrintWriter(osw);
 					pr.println(msg);
 					pr.flush();
 					isWhisper = !isWhisper;
-				}else{ // ÀÏ¹İ ¸Ş½ÃÁö
+				}else{ // ì¼ë°˜ ë©”ì‹œì§€
 					for(int i=0;i<users.size();i++){
 						OutputStreamWriter osw = new OutputStreamWriter(users.get(i).getOutputStream());
 						PrintWriter pr = new PrintWriter(osw);
@@ -97,13 +97,13 @@ class ServerThread extends Thread{
 				}
 			}
 		} catch (IOException e) {
-			System.out.println("[" + client.getInetAddress().getHostAddress() + "] °¡ Á¢¼ÓÀ» Á¾·á ÇÏ¿´½À´Ï´Ù.");
+			System.out.println("[" + client.getInetAddress().getHostAddress() + "] ê°€ ì ‘ì†ì„ ì¢…ë£Œ í•˜ì˜€ìŠµë‹ˆë‹¤.");
 		} finally{
 			FileCloser.close(br);
 			FileCloser.close(isr);
 			FileCloser.close(is);
 			users.remove(client);
-			System.out.println("ÇöÀç ¿¬°á ÀÎ¿ø : " + users.size());
+			System.out.println("í˜„ì¬ ì—°ê²° ì¸ì› : " + users.size());
 		}
 	}
 }
@@ -118,11 +118,11 @@ public class Server {
 	public void start() throws IOException{
 		server = new ServerSocket(portNumber);
 		while(true){
-			System.out.println("[Å¬¶óÀÌ¾ğÆ® ¿¬°á ´ë±âÁß....");
+			System.out.println("[í´ë¼ì´ì–¸íŠ¸ ì—°ê²° ëŒ€ê¸°ì¤‘....");
 			Socket client = server.accept();
-			System.out.println("[" + client.getInetAddress().getHostAddress() + "] °¡ ¿¬°á µÇ¾ú½À´Ï´Ù.");
+			System.out.println("[" + client.getInetAddress().getHostAddress() + "] ê°€ ì—°ê²° ë˜ì—ˆìŠµë‹ˆë‹¤.");
 			users.add(client);
-			System.out.println("ÇöÀç ¿¬°á ÀÎ¿ø : " + users.size() + "¸í");
+			System.out.println("í˜„ì¬ ì—°ê²° ì¸ì› : " + users.size() + "ëª…");
 			new ServerThread(users, client).start();
 		}
 	}

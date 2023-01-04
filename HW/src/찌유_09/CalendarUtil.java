@@ -1,4 +1,4 @@
-package ÂîÀ¯_09;
+package ì°Œìœ _09;
 
 import java.util.Calendar;
 
@@ -16,19 +16,19 @@ public class CalendarUtil {
 		Calendar c = Calendar.getInstance();
 		c.set(year, month-1, 1);
 		
-		// ÇØ´ç ³â¿ù¿¡ 1ÀÏÀº ¹«½¼¿äÀÏ???
-		int week = c.get(Calendar.DAY_OF_WEEK);	// 1(ÀÏ) ~ 7(Åä)
-		// ÇØ´ç ³â¿ùÀÇ ¸¶Áö¸·³¯Àº ¸îÀÏ???
+		// í•´ë‹¹ ë…„ì›”ì— 1ì¼ì€ ë¬´ìŠ¨ìš”ì¼???
+		int week = c.get(Calendar.DAY_OF_WEEK);	// 1(ì¼) ~ 7(í† )
+		// í•´ë‹¹ ë…„ì›”ì˜ ë§ˆì§€ë§‰ë‚ ì€ ëª‡ì¼???
 		int lastDay = c.getActualMaximum(Calendar.DAY_OF_MONTH);
 		
-		System.out.println("< " + year + "³â " + month + "¿ù>");
+		System.out.println("< " + year + "ë…„ " + month + "ì›”>");
 		showByDay(week, lastDay);
 	}
 	
 	private void showByDay(int week, int lastDay) {
 		
 		System.out.println("---------------------------------------------------");
-		System.out.println("ÀÏ\t¿ù\tÈ­\t¼ö\t¸ñ\t±İ\tÅä");
+		System.out.println("ì¼\tì›”\tí™”\tìˆ˜\tëª©\tê¸ˆ\tí† ");
 		System.out.println("---------------------------------------------------");
 		
 		int cnt = 0;

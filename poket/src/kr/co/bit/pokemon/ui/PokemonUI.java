@@ -28,7 +28,7 @@ public class PokemonUI extends BaseUI {
 				ui = new ExitUI();
 				break;
 			default:
-				System.out.println("Àß¸øµÈ ÀÔ·ÂÀÔ´Ï´Ù.");
+				System.out.println("ì˜ëª»ëœ ì…ë ¥ì…ë‹ˆë‹¤.");
 			}
 			if (ui != null) {
 				ui.execute();
@@ -40,14 +40,14 @@ public class PokemonUI extends BaseUI {
 		System.out.println("---------------------------------");
 		System.out.println("\tPokemon GO");
 		System.out.println("---------------------------------");
-		System.out.println("1. »ç³É");
-		System.out.println("2. ¸¶ÄÏ");
-		System.out.println("3. ¼ÒÀ¯ Æ÷ÄÏ¸ó ¸ñ·Ï");
-		System.out.println("4. Æ÷ÄÏ¸ó µµ°¨");
-		System.out.println("5. Æ÷ÄÏ¸ó VS Æ÷ÄÏ¸ó");
-		System.out.println("0. Á¾·á");
+		System.out.println("1. ì‚¬ëƒ¥");
+		System.out.println("2. ë§ˆì¼“");
+		System.out.println("3. ì†Œìœ  í¬ì¼“ëª¬ ëª©ë¡");
+		System.out.println("4. í¬ì¼“ëª¬ ë„ê°");
+		System.out.println("5. í¬ì¼“ëª¬ VS í¬ì¼“ëª¬");
+		System.out.println("0. ì¢…ë£Œ");
 		System.out.println("---------------------------------");
-		int type = scanInt("¸Ş´º Áß ¿øÇÏ´Â Ç×¸ñÀ» ¼±ÅÃÇÏ¼¼¿ä : ");
+		int type = scanInt("ë©”ë‰´ ì¤‘ ì›í•˜ëŠ” í•­ëª©ì„ ì„ íƒí•˜ì„¸ìš” : ");
 		return type;
 	
 	}

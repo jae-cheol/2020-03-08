@@ -3,7 +3,7 @@ package kr.co.bit.pokemon.vo;
 public class UserPokemonVO extends PlayVO {
 	private String  id;
 	private String	name;
-	private int		own; // 1ÀÌ¸é ¼ÒÀ¯ Áß, 0ÀÌ¸é °¡Áö°í ÀÖÁö´Â ¾ÊÁö¸¸ °¡Á³´ø Àû ÀÖÀ½
+	private int		own; // 1ì´ë©´ ì†Œìœ  ì¤‘, 0ì´ë©´ ê°€ì§€ê³  ìˆì§€ëŠ” ì•Šì§€ë§Œ ê°€ì¡Œë˜ ì  ìˆìŒ
 	
 	public UserPokemonVO() {}
 

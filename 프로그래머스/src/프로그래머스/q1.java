@@ -1,4 +1,4 @@
-package ÇÁ·Î±×·¡¸Ó½º;
+package í”„ë¡œê·¸ë˜ë¨¸ìŠ¤;
 
 import java.util.Scanner;
 
@@ -6,10 +6,10 @@ public class q1 {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		int n = sc.nextInt();
-		// ÀÚ¿¬¼ö NÀÌ ÁÖ¾îÁü
+		// ìì—°ìˆ˜ Nì´ ì£¼ì–´ì§
 		
 		String str = Integer.toString(n);
-		// Á¤¼ö¸¦ StringÀ¸·Î º¯È¯
+		// ì •ìˆ˜ë¥¼ Stringìœ¼ë¡œ ë³€í™˜
 		
 		int sum = 0;
 		

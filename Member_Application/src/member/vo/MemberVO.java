@@ -9,9 +9,9 @@ create table t_client (
   , constraint pk_t_client_id primary key(id)
 );
 
- * °Ô½Ã¹° Á¤º¸ Å¬·¡½º
+ * ê²Œì‹œë¬¼ ì •ë³´ í´ë˜ìŠ¤
  * VO : Value Object
- * DB¿¡ ´ëÇÑ Á¤º¸µé ÀúÀå...
+ * DBì— ëŒ€í•œ ì •ë³´ë“¤ ì €ì¥...
  * 
  */
 public class MemberVO {

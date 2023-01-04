@@ -1,4 +1,4 @@
-package µ¿±Ô_json;
+package ë™ê·œ_json;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -114,7 +114,7 @@ class Member{
 				}
 				
 			} catch (Exception e) {
-				System.out.println("JSON array parsing ¿Ï·á!");
+				System.out.println("JSON array parsing ì™„ë£Œ!");
 			}
 		return list;
 	}
@@ -123,7 +123,7 @@ class Member{
 public class JSONMain {
 	public static void main(String[] args){
 		Member m = Member.jsonParse("iotest/json.txt");
-		System.out.println("ÆÄÀÏ µ¥ÀÌÅÍ °´Ã¼ Ãâ·Â");
+		System.out.println("íŒŒì¼ ë°ì´í„° ê°ì²´ ì¶œë ¥");
 		System.out.println(m);
 		
 		ArrayList<Member> list = Member.jsonParseArray("iotest/json2.txt");

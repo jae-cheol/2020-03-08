@@ -7,7 +7,7 @@ public class ClientMain {
 		try {
 			new Client("Lee", "localhost", 10002).connect();
 		} catch (IOException e) {
-			System.out.println("¼­¹ö¿¡ Á¢¼Ó ÇÒ ¼ö ¾ø½À´Ï´Ù.(¼­¹ö°¡ ºñ ±¸µ¿ ÁßÀÏ ¼ö ÀÖ½À´Ï´Ù)");
+			System.out.println("ì„œë²„ì— ì ‘ì† í•  ìˆ˜ ì—†ìŠµë‹ˆë‹¤.(ì„œë²„ê°€ ë¹„ êµ¬ë™ ì¤‘ì¼ ìˆ˜ ìˆìŠµë‹ˆë‹¤)");
 		}
 	}
 }

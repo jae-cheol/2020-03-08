@@ -4,7 +4,7 @@ class ExtendThread extends Thread {
 	@Override
 	public void run() {
 		for(int i = 1; i <= 100; i++) {
-			System.out.println(i + "¹øÂ° ÀÎÇü ´« ºÙÀÓ...");
+			System.out.println(i + "ë²ˆì§¸ ì¸í˜• ëˆˆ ë¶™ìž„...");
 		}
 	}
 }
@@ -13,7 +13,7 @@ class ImplementThread implements Runnable {
 	@Override
 	public void run() {
 		for(int i = 1; i <= 100; i++) {
-			System.out.println(i + "¹øÂ° ÀÎÇü ÄÚ ¸¸µë...");
+			System.out.println(i + "ë²ˆì§¸ ì¸í˜• ì½” ë§Œë“¬...");
 		}
 	}
 }
@@ -25,19 +25,19 @@ public class ThreadMain02 {
 
 		Thread t = new Thread(it);
 		
-		System.out.println("¸ÞÀÎ½º·¹µå °¨µ¶Áß...");
+		System.out.println("ë©”ì¸ìŠ¤ë ˆë“œ ê°ë…ì¤‘...");
 		et.start();
 		t.start();
 		
 		try {
-			et.join(); // et Thread°¡ ³¡³ª°í ÀÛ¾÷ÇÔ.
+			et.join(); // et Threadê°€ ëë‚˜ê³  ìž‘ì—…í•¨.
 			t.join();
 		} catch(Exception e) { e.printStackTrace(); }
 
-		System.out.println("¸ÞÀÎ½º·¹µå °¨µ¶¿Ï·á...");
+		System.out.println("ë©”ì¸ìŠ¤ë ˆë“œ ê°ë…ì™„ë£Œ...");
 		
 		for(int i = 1; i <= 100; i++) {
-			System.out.println(i + "¹øÂ° °¨µ¶Áß...");
+			System.out.println(i + "ë²ˆì§¸ ê°ë…ì¤‘...");
 		}
 	}
 }

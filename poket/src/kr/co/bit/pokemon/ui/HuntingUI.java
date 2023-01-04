@@ -12,8 +12,8 @@ public class HuntingUI extends BaseUI {
 	@Override
 	public void execute() throws Exception {
 //		while (true) {
-			/* intro Ãâ·Â */
-			String str = "»ç³ÉÀ» ¶°³ªº¼±î!!!!!\n";
+			/* intro ì¶œë ¥ */
+			String str = "ì‚¬ëƒ¥ì„ ë– ë‚˜ë³¼ê¹Œ!!!!!\n";
 			System.out.println(str);
 			// char[] intro = str.toCharArray();
 			//
@@ -28,7 +28,7 @@ public class HuntingUI extends BaseUI {
 
 			Rand rand = new Rand();
 			int monster_select = rand.rarity_Rand();
-			// Æ÷ÄÏ¸ó ·£´ı Ãâ¸ô
+			// í¬ì¼“ëª¬ ëœë¤ ì¶œëª°
 
 			UserInfoVO user = service.selectUserInfo();
 			List<PokemonVO> monlist = service.selectMonsterInfo();
@@ -42,16 +42,16 @@ public class HuntingUI extends BaseUI {
 			// user.setStat(user.getId(), user.getOffensive()+30,
 			// user.getDefensive(), user.getLife(), user.getMoney());
 			// }
-			// DBÀÇ À¯ÀúÁ¤º¸¸¦ °¡Á®¿Í¼­ user°´Ã¼¿¡ ³Ö¾î¼­ »ç¿ë.
+			// DBì˜ ìœ ì €ì •ë³´ë¥¼ ê°€ì ¸ì™€ì„œ userê°ì²´ì— ë„£ì–´ì„œ ì‚¬ìš©.
 
 			mon1.setStat(monlist.get(monster_select).getName(), monlist.get(monster_select).getOffensive(),
 					monlist.get(monster_select).getDefensive(), monlist.get(monster_select).getPrice(),
 					monlist.get(monster_select).getRarity(), monlist.get(monster_select).getLife());
-			// DBÀÇ Æ÷ÄÏ¸óÁß Ãâ¸ôÇÑ Æ÷ÄÏ¸óÀÇ Á¤º¸¸¦ °¡Á®¿Í¼­ mon1°´Ã¼¿¡ ³Ö¾î¼­ »ç¿ë.
+			// DBì˜ í¬ì¼“ëª¬ì¤‘ ì¶œëª°í•œ í¬ì¼“ëª¬ì˜ ì •ë³´ë¥¼ ê°€ì ¸ì™€ì„œ mon1ê°ì²´ì— ë„£ì–´ì„œ ì‚¬ìš©.
 
 			System.out.println();
-			System.out.println("ÁÁ¾Æ!!! " + mon1.getName() + " ¹ß°ß!!!");
-			System.out.println(mon1.getName() + " ½Î¿ìÀÚ!!");
+			System.out.println("ì¢‹ì•„!!! " + mon1.getName() + " ë°œê²¬!!!");
+			System.out.println(mon1.getName() + " ì‹¸ìš°ì!!");
 			System.out.println();
 			System.out.println("-----------------------------------------------------------");
 			System.out.println(user.toString());
@@ -59,46 +59,46 @@ public class HuntingUI extends BaseUI {
 			System.out.println("-----------------------------------------------------------");
 
 			int battle_cnt = 0;
-			// ÀüÅõÀÇ ·çÇÁ È½¼ö
+			// ì „íˆ¬ì˜ ë£¨í”„ íšŸìˆ˜
 
 			while (battle_cnt < 15) {
 				battle_cnt++;
 
 				user.Attack(mon1.getOffensive());
 				mon1.Attack(user.getOffensive());
-				// ¼­·Î 1ÅÏ¾¿ °ø°İ
+				// ì„œë¡œ 1í„´ì”© ê³µê²©
 
 				user.PrintHp(mon1.getName());
 				mon1.PrintHp(user.getId());
 				System.out.println();
 				Thread.sleep(300);
 				if (battle_cnt == 15) {
-					System.out.println("µÑ´Ù ¸ğµÎ ÁöÃÆ½À´Ï´Ù.");
+					System.out.println("ë‘˜ë‹¤ ëª¨ë‘ ì§€ì³¤ìŠµë‹ˆë‹¤.");
 					break;
 				}
 
 				if (user.getLife() <= 0 && mon1.getLife() <= 0) {
-					System.out.println("ºñ°å½À´Ï´Ù. ¸ó½ºÅÍ°¡ µµ¸Á°©´Ï´Ù.");
+					System.out.println("ë¹„ê²¼ìŠµë‹ˆë‹¤. ëª¬ìŠ¤í„°ê°€ ë„ë§ê°‘ë‹ˆë‹¤.");
 					break;
 				}
 				if (user.getLife() <= 0 && mon1.getLife() >= 0) {
-					System.out.println("Á³´Ù...µµ¸Á°¡ÀÚ!!!");
+					System.out.println("ì¡Œë‹¤...ë„ë§ê°€ì!!!");
 					break;
 				}
 				if (user.getLife() >= 0 && mon1.getLife() <= 0) {
-					// ÃÊ±â°ªÀÌ 1ÀÌ¶ó¼­ Ã³À½¿£ ¹«Á¶°Ç È¹µæÇÏ°í, ¸®ÅÏÇÏ±âÀü 0À¸·Î ¸¸µé¾îÁÖ±â ¶§¹®¿¡ 0À¸·Î ÇØ¾ß Àâ¾Ò´Ù´Â
-					// ¸Ş½ÃÁö
-					// Ãâ·Â.
+					// ì´ˆê¸°ê°’ì´ 1ì´ë¼ì„œ ì²˜ìŒì—” ë¬´ì¡°ê±´ íšë“í•˜ê³ , ë¦¬í„´í•˜ê¸°ì „ 0ìœ¼ë¡œ ë§Œë“¤ì–´ì£¼ê¸° ë•Œë¬¸ì— 0ìœ¼ë¡œ í•´ì•¼ ì¡ì•˜ë‹¤ëŠ”
+					// ë©”ì‹œì§€
+					// ì¶œë ¥.
 					UserPokemonVO userPokemon = new UserPokemonVO(user.getId(), mon1.getName());
 					if (service.insertPokemon(userPokemon) == 1) {
-						System.out.println(mon1.getName() + "!!! ³Í ³»²¨¾ß!!");
-						System.out.println(mon1.getName() + "¸¦ Àâ¾Ò½À´Ï´Ù. ÀÚ¼¼ÇÑ Á¤º¸´Â ¼ÒÀ¯ Æ÷ÄÏ¸ó ¸ñ·ÏÀ» È®ÀÎÇØÁÖ¼¼¿ä.");
+						System.out.println(mon1.getName() + "!!! ë„Œ ë‚´êº¼ì•¼!!");
+						System.out.println(mon1.getName() + "ë¥¼ ì¡ì•˜ìŠµë‹ˆë‹¤. ìì„¸í•œ ì •ë³´ëŠ” ì†Œìœ  í¬ì¼“ëª¬ ëª©ë¡ì„ í™•ì¸í•´ì£¼ì„¸ìš”.");
 					} else {
 						if (service.own1Pokemon(userPokemon) == 1) {
-							System.out.println(mon1.getName() + "!!! ³Í ³»²¨¾ß!!");
-							System.out.println(mon1.getName() + "¸¦ Àâ¾Ò½À´Ï´Ù. ÀÚ¼¼ÇÑ Á¤º¸´Â ¼ÒÀ¯ Æ÷ÄÏ¸ó ¸ñ·ÏÀ» È®ÀÎÇØÁÖ¼¼¿ä.");
+							System.out.println(mon1.getName() + "!!! ë„Œ ë‚´êº¼ì•¼!!");
+							System.out.println(mon1.getName() + "ë¥¼ ì¡ì•˜ìŠµë‹ˆë‹¤. ìì„¸í•œ ì •ë³´ëŠ” ì†Œìœ  í¬ì¼“ëª¬ ëª©ë¡ì„ í™•ì¸í•´ì£¼ì„¸ìš”.");
 						} else
-							System.out.println("ÀÌ¹Ì °°Àº Á¾·ù Æ÷ÄÏ¸óÀÌ ÀÖ¾î ³öÁÖµµ·Ï ÇÏ°Ú½À´Ï´Ù.");
+							System.out.println("ì´ë¯¸ ê°™ì€ ì¢…ë¥˜ í¬ì¼“ëª¬ì´ ìˆì–´ ë†”ì£¼ë„ë¡ í•˜ê² ìŠµë‹ˆë‹¤.");
 					}
 					break;
 				}
